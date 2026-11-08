@@ -71,6 +71,33 @@
 - **每日检索**：搜索新免费 VPN → 核实后入库；入库前比对 `removed`/`discontinued`，按信息新旧日期避免重复添加已确认无效的服务——除非有更新的证据表明其恢复有效。
 - 有变化时在聊天中汇报；无变化时保持安静。
 
+## 自动化流程
+
+```
+free-vpn-db.yaml ──▶ page/generate.py ──▶ page/index.html（自包含静态页）
+                    └─▶ export_page_sync.py ──▶ Muse artifact 页面同步快照
+                    └─▶ sync.sh ──▶ git commit + push 到 origin main
+```
+
+- **数据库是唯一事实来源**：所有展示（README 表格、静态页、Muse artifact 页）都从 `free-vpn-db.yaml` 生成。
+- **页面生成是确定性的**：`page/generate.py` 输出不含当前时间戳，数据不变则页面字节不变，不会产生无意义提交。
+- **`sync.sh` 一键同步**（无变更时自动跳过）：
+  ```bash
+  bash sync.sh "更新数据库：新增 Avast VPN Free"
+  ```
+- **定时任务已接线**：每周复核（`free-vpn-db-monthly-check`）与每日检索（`free-vpn-db-daily-discovery`）在改动 YAML 后自动执行上述同步（重建 artifact 页面 + `sync.sh` 提交推送）。
+- **远程仓库**：`ssh://git@gits.d35.kdns.fr:2222/kuangdash/FreeVPN.git`（Gitea，直连 2222 端口；deploy key 在 `/home/hatch/.ssh/vpn_db_push_deploy`，不要删除）。
+
+## 部署静态页
+
+```bash
+# 数据更新后，重新生成页面
+python3 page/generate.py
+git add -A && git commit -m "更新数据库" && git push
+```
+
+部署二选一：把 `page/index.html` 放到任意静态托管（GitHub Pages / Cloudflare Pages / Nginx），或直接用浏览器打开本文件。
+
 ## 页面生成与部署
 
 可浏览页面由 `page/generate.py` 从 `free-vpn-db.yaml` 生成，输出为自包含单文件 `page/index.html`（无外部依赖、无后端，搜索与筛选在浏览器本地完成）。

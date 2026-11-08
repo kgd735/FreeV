@@ -9,7 +9,6 @@
 import html
 import json
 import os
-from datetime import datetime, timezone
 
 import yaml
 
@@ -36,7 +35,6 @@ def main():
     res_true = sum(1 for e in entries if e["residential_ip"]["has"] is True)
     res_part = sum(1 for e in entries if e["residential_ip"]["has"] == "partial")
     res_count = res_true + res_part
-    generated = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M %Z")
     last_review = db.get("last_full_review", "")
 
     cards = []
@@ -206,7 +204,7 @@ def main():
   {('<section class="dead"><h2>已移除（墓碑）</h2><table><thead><tr><th>名称</th><th>原因</th><th>移除日期</th></tr></thead><tbody>' + ''.join(removed_rows) + '</tbody></table></section>') if removed_rows else ''}
 </main>
 <footer>
-  <p>数据来源：free-vpn-db.yaml（本仓库）。最后全面复核：{esc(last_review)}。页面生成于 {esc(generated)}。</p>
+  <p>数据来源：free-vpn-db.yaml（本仓库）。最后全面复核：{esc(last_review)}。</p>
   <p>核实方式：官网可达性检测 + 评测交叉核对；确认无效 = 官网长期不可达且 90 天内无免费档可信证据，删除后记入墓碑。</p>
 </footer>
 <script>

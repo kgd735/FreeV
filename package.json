@@ -1,0 +1,1 @@
+{"dependencies":{"js-yaml":"^4.1.0"},"description":"免费 VPN 数据库：free-vpn-db.yaml 为唯一事实来源，页面在运行时加载并解析 YAML 自动渲染","engines":{"node":">=20"},"name":"free-vpn-db","private":true,"scripts":{"build":"node scripts/build.js","check":"node scripts/check-urls.js","export-sync":"node scripts/export-page-sync.js","sync":"bash sync.sh"},"type":"commonjs","version":"1.0.0"}

@@ -4,7 +4,7 @@
 
 - 机器可读数据：`free-vpn-db.yaml`（每月定时任务复核更新）
 - 可浏览页面：见聊天中的数据库页面
-- 官网可达性检测：`check_urls.py`
+- 官网可达性检测：`node scripts/check-urls.js`
 
 ## 一句话结论
 
@@ -71,48 +71,45 @@
 - **每日检索**：搜索新免费 VPN → 核实后入库；入库前比对 `removed`/`discontinued`，按信息新旧日期避免重复添加已确认无效的服务——除非有更新的证据表明其恢复有效。
 - 有变化时在聊天中汇报；无变化时保持安静。
 
-## 自动化流程
+## 自动化流程（Node.js）
 
 ```
-free-vpn-db.yaml ──▶ page/generate.py ──▶ page/index.html（自包含静态页）
-                    └─▶ export_page_sync.py ──▶ Muse artifact 页面同步快照
+free-vpn-db.yaml ──▶ page/app.js（浏览器运行时 fetch + js-yaml 解析渲染）
+                    └─▶ scripts/build.js ──▶ 同步 page/free-vpn-db.yaml（页面运行时加载的文件）
+                    └─▶ scripts/export-page-sync.js ──▶ Muse artifact 页面同步快照
                     └─▶ sync.sh ──▶ git commit + push 到 origin main
 ```
 
 - **数据库是唯一事实来源**：所有展示（README 表格、静态页、Muse artifact 页）都从 `free-vpn-db.yaml` 生成。
-- **页面生成是确定性的**：`page/generate.py` 输出不含当前时间戳，数据不变则页面字节不变，不会产生无意义提交。
+- **页面自动更新**：`page/index.html` 不内嵌数据，打开时由 `page/app.js` 加载同目录的 `page/free-vpn-db.yaml` 并用 js-yaml 解析渲染。数据库文件一变，刷新页面即自动更新，无需重新生成 HTML（`scripts/build.js` 负责把根目录的 YAML 同步到 `page/`）。
 - **`sync.sh` 一键同步**（无变更时自动跳过）：
   ```bash
   bash sync.sh "更新数据库：新增 Avast VPN Free"
   ```
 - **定时任务已接线**：每周复核（`free-vpn-db-monthly-check`）与每日检索（`free-vpn-db-daily-discovery`）在改动 YAML 后自动执行上述同步（重建 artifact 页面 + `sync.sh` 提交推送）。
 - **远程仓库**：`ssh://git@gits.d35.kdns.fr:2222/kuangdash/FreeVPN.git`（Gitea，直连 2222 端口；deploy key 在 `/home/hatch/.ssh/vpn_db_push_deploy`，不要删除）。
+- **环境要求**：Node.js ≥ 20；首次使用先 `npm install`（安装 js-yaml）。
 
 ## 部署静态页
 
-```bash
-# 数据更新后，重新生成页面
-python3 page/generate.py
-git add -A && git commit -m "更新数据库" && git push
-```
-
-部署二选一：把 `page/index.html` 放到任意静态托管（GitHub Pages / Cloudflare Pages / Nginx），或直接用浏览器打开本文件。
-
-## 页面生成与部署
-
-可浏览页面由 `page/generate.py` 从 `free-vpn-db.yaml` 生成，输出为自包含单文件 `page/index.html`（无外部依赖、无后端，搜索与筛选在浏览器本地完成）。
+页面是纯静态文件（`page/index.html` + `page/app.js` + `page/vendor/js-yaml.min.js` + `page/free-vpn-db.yaml`），无后端。部署时把整个 `page/` 目录放到任意静态托管（GitHub Pages / Cloudflare Pages / Nginx），不要只拷单个 HTML 文件——页面运行时要加载同目录的 `free-vpn-db.yaml`。
 
 ```bash
-# 1. 改完 YAML 后重新生成页面
-python3 page/generate.py        # 需要 PyYAML；输出 page/index.html（30 条、29 已核实、家宽 6）
-
-# 2. 提交并推送
-git add -A && git commit -m "更新数据库" && git push
+# 数据更新后同步并推送（会自动同步 page/free-vpn-db.yaml）
+bash sync.sh "更新数据库"
 ```
 
-部署（二选一）：
+注意：直接双击打开 `page/index.html`（file:// 协议）时浏览器会拦截 fetch，页面会提示加载失败。本地预览请用 HTTP 服务，例如：
 
-- **静态托管（推荐）**：把 `page/index.html` 放到任意静态服务器根目录即可，如 nginx / Caddy / GitHub Pages / Cloudflare Pages；每次数据更新后重新生成并重新部署该文件。
-- **本地直接打开**：双击 `page/index.html` 即可浏览，全部功能可用；也可以 `python3 -m http.server --directory page` 后访问 http://localhost:8000。
+```bash
+npx --yes http-server page -p 8000   # 然后访问 http://localhost:8000
+```
 
-另有 `export_page_sync.py`：把 YAML 导出为 Markdown 快照，供 Muse 聊天内的数据库页面（artifact）同步使用，与本页生成器互不依赖。
+## 页面结构
+
+- `page/index.html`：页面骨架（样式、搜索框、筛选按钮、空容器）。
+- `page/app.js`：运行时逻辑——fetch `free-vpn-db.yaml` → js-yaml 解析 → 渲染统计、卡片、下线/墓碑表格；搜索与筛选在浏览器本地完成。
+- `page/vendor/js-yaml.min.js`：浏览器端 YAML 解析器（js-yaml 官方构建，随仓库提供，无需联网加载）。
+- `page/free-vpn-db.yaml`：由 `scripts/build.js` 从根目录同步而来，页面运行时加载的就是它。
+
+另有 `scripts/export-page-sync.js`：把 YAML 导出为 Markdown 快照，供 Muse 聊天内的数据库页面（artifact）同步使用，与本页加载逻辑互不依赖。

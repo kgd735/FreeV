@@ -1,0 +1,649 @@
+# 免费 VPN 数据库 (Free VPN Tier Database)
+# schema_version: 1
+# 维护：每月由定时任务复核更新；每次复核更新 last_full_review 与各条目 last_verified
+# residential_ip.has: true=提供住宅IP出口 / false=机房或代理IP / partial=部分是 / unknown=未知
+schema_version: 1
+last_full_review: "2026-11-04"
+entries:
+  - id: urnetwork
+    name: URnetwork
+    official_url: https://ur.io
+    status: active
+    free_tier:
+      data_cap: "30 GiB/day"
+      devices: "2 concurrent clients"
+      countries: "90+ countries (2000+ cities)"
+      signup: "no email required (Instant Account)"
+      card_required: false
+    residential_ip:
+      has: true
+      note: "Residential exits via members' real devices; you -> extender -> operator -> provider -> website"
+    ip_type: "residential / P2P"
+    protocols: ["native app", "X25519MLKEM768 post-quantum session (opt-in)", "WireGuard/SOCKS are Pro-only"]
+    logging: "Claims no-logs, 100% open source; no independent audit of protocol/connect engine/operator code (stated in own docs)"
+    platforms: ["Android", "iOS", "Windows", "macOS", "Linux", "browser extension"]
+    last_verified: "2026-11-04"
+    sources: ["https://ur.io/products", "https://ur.io/docs/faq"]
+
+  - id: protonvpn
+    name: Proton VPN Free
+    official_url: https://protonvpn.com
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "1"
+      countries: "10 (NL, JP, RO, PL, NO, CH, SG, MX, CA, US; auto-assigned)"
+      signup: "email required (Proton account)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs on own network"
+    ip_type: "datacenter"
+    protocols: ["WireGuard", "OpenVPN", "IKEv2", "Stealth"]
+    logging: "Strict no-logs; Securitum audit annually (5th published Jun 2026); SOC 2 Type II (Jul 2025); Switzerland"
+    platforms: ["Windows", "macOS", "Linux", "Android", "iOS", "browser extension"]
+    last_verified: "2026-11-04"
+    sources: ["https://protonvpn.com/free-vpn"]
+
+  - id: windscribe
+    name: Windscribe Free
+    official_url: https://windscribe.com
+    status: active
+    free_tier:
+      data_cap: "10 GB/month with confirmed email (2 GB without)"
+      devices: "unlimited personal devices"
+      countries: "~10-11"
+      signup: "email optional (more data with email)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["WireGuard", "OpenVPN", "IKEv2", "Stealth", "WStunnel"]
+    logging: "No-logs claim; Packetlabs server-software audit (Jun 2024); no published no-logs audit; Canada (5 Eyes)"
+    platforms: ["Windows", "macOS", "Linux", "Android", "iOS", "Chrome/Firefox/Edge extensions"]
+    last_verified: "2026-11-04"
+    sources: ["https://toolradar.com/blog/best-free-vpn-for-pc", "https://theproofdesk.com/windscribe"]
+
+  - id: tunnelbear
+    name: TunnelBear Free
+    official_url: https://www.tunnelbear.com
+    status: active
+    free_tier:
+      data_cap: "2 GB/month (+1 GB for tweeting)"
+      devices: "unlimited devices share the pool"
+      countries: "auto-selected since early 2026 (no manual server choice on free)"
+      signup: "email required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["WireGuard", "OpenVPN", "IKEv2", "GhostBear obfuscation (Win/Android)"]
+    logging: "No-logs claim; Cure53 audits annually since 2016; owned by McAfee; Canada"
+    platforms: ["Windows", "macOS", "Android", "iOS", "browser extensions"]
+    last_verified: "2026-11-04"
+    change_log: "2026: free tier downgraded — server choice removed, split tunneling moved to paid"
+    sources: ["https://www.vpn.com/vpn/tunnelbear/", "https://www.wizcase.com/reviews/tunnelbear-vpn/"]
+
+  - id: hideme
+    name: hide.me Free
+    official_url: https://hide.me
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "1"
+      countries: "7 countries / 8 locations (FI, FR, DE, NL, CH, UK, US)"
+      signup: "no registration required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["WireGuard", "IKEv2", "OpenVPN", "SoftEther (desktop obfuscation)"]
+    logging: "Certified zero-log claim reviewed by Securitum; transparency reports since 2012; Malaysia"
+    platforms: ["Windows", "macOS", "Linux (CLI)", "Android", "iOS"]
+    last_verified: "2026-11-04"
+    sources: ["https://hide.me/en/pricing", "https://www.esecurityplanet.com/products/best-free-vpn/"]
+
+  - id: privadovpn
+    name: PrivadoVPN Free
+    official_url: https://privadovpn.com
+    status: active
+    free_tier:
+      data_cap: "10 GB/month full speed, then throttled"
+      devices: "1"
+      countries: "13 free cities in 10 countries (AR, BR, CA, FR, DE, MX, NL, CH, GB, US; P2P allowed)"
+      signup: "email required; free plan must be renewed monthly in-app"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN", "IKEv2", "WireGuard", "Scramble obfuscation (mobile)"]
+    logging: "No-logs claim NOT independently audited; operated by Privado Networks ehf. (Iceland) since 2026-05-01 (Swiss entity retained for payment processing only)"
+    platforms: ["Windows", "macOS", "Android", "iOS", "Android TV", "Fire TV", "tvOS"]
+    last_verified: "2026-11-04"
+    change_log: "2026-05: jurisdiction moved Switzerland -> Iceland (confirmed by vpn.com, TechRadar; Gizmodo Oct 2026: free plan requires monthly in-app renewal)"
+    sources: ["https://www.vpn.com/vpn/privadovpn/", "http://safelyo.com/reviews/privadovpn/", "https://gizmodo.com/best-vpn/free", "https://thehightechsociety.com/best-free-vpn/"]
+
+  - id: avira-phantom
+    name: Avira Phantom VPN Free
+    official_url: https://www.avira.com
+    status: active
+    free_tier:
+      data_cap: "500 MB/month (1 GB/month with free Avira account)"
+      devices: "unlimited"
+      countries: "auto-connect to nearest (no manual selection on free)"
+      signup: "optional (more data with account)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN"]
+    logging: "No-logs claim; no published independent audit; Germany (14 Eyes)"
+    platforms: ["Windows", "macOS", "Android", "iOS"]
+    last_verified: "2026-11-04"
+    sources: ["https://gizmodo.com/best-vpn/avira-vpn", "https://www.security.org/vpn/avira-phantom/"]
+
+  - id: speedify
+    name: Speedify Free
+    official_url: https://speedify.com
+    status: active
+    free_tier:
+      data_cap: "2 GB/month"
+      devices: "5"
+      countries: "same locations as paid"
+      signup: "no account info required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["proprietary channel-bonding protocol"]
+    logging: "No-logs claim; no widely cited independent audit; US"
+    platforms: ["Windows", "macOS", "Android", "iOS"]
+    last_verified: "2026-11-04"
+    sources: ["https://www.wizcase.com/reviews/speedify-vpn/", "https://www.security.org/vpn/speedify-vpn/"]
+
+  - id: hotspot-shield
+    name: Hotspot Shield Free
+    official_url: https://www.hotspotshield.com
+    status: active
+    free_tier:
+      data_cap: "desktop 500 MB/day (2 Mbps cap); mobile unlimited with ads (15 min per ad)"
+      devices: "1"
+      countries: "desktop US only; mobile US/UK/SG (auto)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["Catapult Hydra (proprietary)"]
+    logging: "NOT no-logs — keeps anonymized domain records + device ID used for marketing; owned by Aura; US"
+    platforms: ["Windows", "macOS", "Android", "iOS"]
+    last_verified: "2026-11-04"
+    sources: ["https://gizmodo.com/best-vpn/free", "https://www.security.org/vpn/hotspot-shield/"]
+
+  - id: betternet
+    name: Betternet
+    official_url: https://www.betternet.co
+    status: active
+    free_tier:
+      data_cap: "desktop 500 MB/day; mobile officially unlimited with ads — UNVERIFIED: multiple 2026 reviews (thebestvpn, vpnguru, wizcase) claim mobile free is also 500 MB/day"
+      devices: "1"
+      countries: "3 (US, UK, SG; auto-selected)"
+      signup: "no account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["Catapult Hydra (proprietary)"]
+    logging: "Claims no activity logs but logs IP address; iOS label lists advertising/location/identifiers/usage data; owned by Aura; US"
+    platforms: ["Windows", "macOS", "Android", "iOS", "Chrome/Firefox extensions"]
+    last_verified: "2026-11-04"
+    sources: ["https://de.safetydetectives.com/best-vpns/betternet-vpn/post", "https://thebestvpn.com/reviews/betternet/"]
+
+  - id: urban-vpn
+    name: Urban VPN
+    official_url: https://www.urban-vpn.com
+    status: active
+    free_tier:
+      data_cap: "desktop unlimited"
+      devices: "unlimited personal devices (per Security.org 2026 review)"
+      countries: "~82-85"
+      signup: "no account/email required"
+      card_required: false
+    residential_ip:
+      has: true
+      note: "P2P residential — your device acts as an exit node for other users' traffic"
+    ip_type: "peer-to-peer / residential"
+    protocols: ["OpenVPN (per reviewers)", "no kill switch"]
+    logging: "EXTENSIVE logging (IP, browsing history, timestamps, cookies, clicks); affiliated with BIScience; Jul 2025 Koi Security: Chrome extension (8M+ installs) harvested AI chat prompts and sold data — subject of ongoing class-action investigation (openclassactions.com, updated ~Aug 2026; Infosecurity Magazine 2026-11-01); no audit; US (5 Eyes)"
+    platforms: ["Windows", "macOS", "Android", "iOS", "Chrome/Firefox extensions"]
+    last_verified: "2026-11-04"
+    sources: ["https://bearvpn.com/blog/urban-vpn-review/", "https://www.wizcase.com/reviews/urban-vpn/", "https://www.security.org/vpn/urban/"]
+
+  - id: tuxlervpn
+    name: tuxlerVPN
+    official_url: https://tuxler.com
+    status: active
+    free_tier:
+      data_cap: "unlimited bandwidth"
+      devices: "1"
+      countries: "~92-128 (10 free location changes)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: true
+      note: "Residential P2P — free users share their own residential IP and bandwidth; opt-out only on Premium ($7.99/mo)"
+    ip_type: "peer-to-peer / residential"
+    protocols: ["SOCKS5-based"]
+    logging: "Limited transparency; reviewers question no-logs claim"
+    platforms: ["Windows app", "Chrome/Firefox extensions"]
+    last_verified: "2026-11-04"
+    sources: ["https://www.vpnmentor.com/reviews/tuxler/", "https://esim.holafly.com/internet/tuxler-vpn-review/"]
+
+  - id: hola
+    name: Hola VPN
+    official_url: https://hola.org
+    status: active
+    free_tier:
+      data_cap: "unlimited data (daily time limits ~30 min/hour on some platforms)"
+      devices: "1"
+      countries: "~195"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: true
+      note: "P2P — free Windows/Mac apps and sideloaded Android contribute your idle connection (~100 MB/day per FAQ); browser extensions/iOS/Play-Android NOT in peer pool"
+    ip_type: "peer-to-peer / residential"
+    protocols: ["IKEv2/IPsec AES-256 (desktop)", "browser extension is HTTPS proxy"]
+    logging: "Conflicting claims (strict no-logging on promo site vs reports of browsing-data logging); no independent audit; Israel"
+    platforms: ["Windows", "macOS", "Android", "iOS", "Chrome/Opera/Edge extensions"]
+    last_verified: "2026-11-04"
+    sources: ["https://thehightechsociety.com/hola-vpn-review/", "https://www.security.org/vpn/hola/"]
+
+  - id: starvpn
+    name: StarVPN (Residential VPN)
+    official_url: https://www.starvpn.com
+    status: active
+    free_tier:
+      data_cap: "100 GB/month"
+      devices: "1"
+      countries: "Tier 1 (CA, US, GB, DE, AU)"
+      signup: "no registration (Guest mode)"
+      card_required: false
+    residential_ip:
+      has: partial
+      note: "Residential IPs confirmed as PAID-TIER feature (vpnmentor 2026 review: requires expensive tiers; static IPs hosted in datacenters; true home IPs on top tier). Free-tier (100 GB/mo guest) IP type UNVERIFIED — official marketing claims residential. DURATION DISPUTED, leaning free-for-life: Play listing v2.45 (2026-10-20) still '100% free for life'; Softonic 90-day/account claim (2026-08-26) uncorroborated, may reference a different 'Star VPN' app"
+    ip_type: "residential (paid tiers); free tier unverified"
+    protocols: ["OpenVPN", "WireGuard", "AmneziaWG"]
+    logging: "No-logs claim; no known independent audit"
+    platforms: ["Android", "iOS", "macOS", "Windows"]
+    last_verified: "2026-11-04"
+    change_log: "2026-08-26: Softonic re-affirmed 90 days/account claim, contradicting official 'free for life' — dispute unresolved. 2026-11-04: vpnmentor 2026 review flags residential IPs as paid-tier feature; free-tier IP type unverified. Duration: Play listing v2.45 (Oct 20 2026) still '100% free for life'; Softonic 90-day claim uncorroborated (may be different app) — leaning free-for-life"
+    sources: ["https://play.google.com/store/apps/details?id=com.starvpn", "https://residential-vpn.en.softonic.com/mac", "https://www.appbrain.com/app/starvpn-private-secure-vpn/com.starvpn", "https://www.vpnmentor.com/reviews/starvpn/"]
+
+  - id: anomi-vpn
+    name: Anomi VPN
+    official_url: https://anomivpn.com
+    status: uncertain
+    free_tier:
+      data_cap: "500 MB/day (per listing)"
+      devices: "browser only"
+      countries: "20+ (claimed)"
+      signup: "n/a"
+      card_required: false
+    residential_ip:
+      has: unknown
+      note: "Claims residential IPs but could not verify; Scam Detector trust score 36.9/100"
+    ip_type: "residential (claimed, unverified)"
+    protocols: ["unspecified"]
+    logging: "Unknown — no published policy found; individual developer"
+    platforms: ["Chrome extension only"]
+    last_verified: "2026-11-04"
+    change_log: "Could not verify function in 2026: extension v1.4 dated Jul 19 2025; Chrome disabled all Manifest V2 extensions Jul 24 2025; MV3 migration unconfirmed. 2026-11-04 recheck: anomivpn.com still unreachable; Chrome Web Store listing still v1.4 MV2 (no MV3 evidence)"
+    sources: ["https://chromewebstore.google.com/detail/anomi-vpn-free-residentia/agbklapacbpooaenpbmboiodiphfcjnh", "https://www.scam-detector.com/validator/anomivpn-com-review/"]
+
+  - id: cloudflare-warp
+    name: Cloudflare WARP
+    official_url: https://www.cloudflare.com
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "1"
+      countries: "no location choice (nearest Cloudflare datacenter)"
+      signup: "no account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Cloudflare edge network IPs (datacenter)"
+    ip_type: "datacenter"
+    protocols: ["MASQUE (HTTP/3/QUIC) per Oct 2026 docs"]
+    logging: "1.1.1.1 privacy policy audited by KPMG (2019); US"
+    platforms: ["Windows", "macOS", "Linux", "iOS", "Android"]
+    last_verified: "2026-11-04"
+    sources: ["https://windscribe.com/blog/cloudflare-warp-vs-vpn/", "https://www.vpnsmith.com/en/blog/cloudflare-warp-vs-wireguard-self-host-2026"]
+
+  - id: opera-vpn
+    name: Opera browser VPN
+    official_url: https://www.opera.com
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "browser only"
+      countries: "3 regions (Americas, Europe, Asia)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Opera datacenter servers; browser-only proxy (not device-wide)"
+    ip_type: "datacenter (browser proxy)"
+    protocols: ["HTTPS/SOCKS5 proxy marketed as VPN (AES-256)"]
+    logging: "No-logs claim; Deloitte no-log audit (2024); Cure53 code audit; owned by Chinese consortium (Kunlun Tech) since 2016"
+    platforms: ["Opera browser on Windows, macOS, Linux, Android, iOS"]
+    last_verified: "2026-11-04"
+    change_log: "2026-09-24: free VPN adds opt-in auto-on for public Wi-Fi networks (US/FR desktop first)"
+    sources: ["https://blogs.opera.com/security/2026/05/opera-vpn-is-safe/", "https://gizmodo.com/best-vpn/free/unlimited-data", "https://press.opera.com/2026/09/24/opera-free-vpn-can-now-automatically-protect-you-on-public-wi-fi-networks/"]
+
+  - id: vpngate
+    name: VPN Gate (University of Tsukuba)
+    official_url: https://www.vpngate.net
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "n/a (manual config)"
+      countries: "volunteer servers worldwide (many in Japan)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: partial
+      note: "Volunteer-run nodes; many are personal/home connections, mixed with VPS"
+    ip_type: "volunteer nodes (mixed residential/datacenter)"
+    protocols: ["SoftEther", "OpenVPN", "L2TP/IPsec", "MS-SSTP"]
+    logging: "KNOWN LOGGING: connection logs incl. user IP kept >=3 months; volunteer servers record traffic >=2 weeks; shared with police/courts; operators can see unencrypted traffic; Japan"
+    platforms: ["Windows", "macOS", "Android", "iOS (manual config + third-party apps)"]
+    last_verified: "2026-11-04"
+    sources: ["https://www.vpngate.net/en/", "https://foundorasystems.com/best-free-vpn-server-list-for-android-in-2026/"]
+
+  - id: vpnbook
+    name: VPNBook
+    official_url: https://www.vpnbook.com
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "1 (free WireGuard configs: 7-day, 1 device)"
+      countries: "~8 servers in 5 countries (US, CA, UK, DE, FR)"
+      signup: "no registration — shared public credentials (rotated ~every 1-2 weeks; last change Oct 24 2026)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN", "PPTP", "L2TP/IPsec", "WireGuard"]
+    logging: "Retains some user data (conflicting statements: weekly vs daily deletion); not no-logs; Switzerland"
+    platforms: ["manual config only (no apps)"]
+    last_verified: "2026-11-04"
+    sources: ["https://www.vpnbook.com/freevpn/openvpn", "https://www.vpnblade.net/compare/vpnbook-vs-cyberghost/"]
+
+  - id: lantern
+    name: Lantern
+    official_url: https://lantern.io
+    status: active
+    free_tier:
+      data_cap: "512 MB/day (unlimited in Iran/Russia/Belarus)"
+      devices: "1"
+      countries: "n/a"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter + peer volunteer network (not residential ISP exits)"
+    ip_type: "datacenter / peer"
+    protocols: ["proprietary Lantern proxy"]
+    logging: "No audited no-logs policy; open source; nonprofit (Brave New Software)"
+    platforms: ["Android", "iOS", "Windows", "macOS", "Linux"]
+    last_verified: "2026-11-04"
+    sources: ["https://play.google.com/store/apps/details?id=org.getlantern.lantern", "https://www.itechguides.com/products/lantern/"]
+
+  - id: psiphon
+    name: Psiphon
+    official_url: https://psiphon.ca
+    status: active
+    free_tier:
+      data_cap: "unlimited (speed capped ~2 Mbps; ads)"
+      devices: "1"
+      countries: "~28 (mostly Europe)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["SSH with obfuscation", "HTTP proxy", "L2TP/IPsec VPN mode"]
+    logging: "Not a privacy product — upfront circumvention tool; logs sensitive data; open source; Canada"
+    platforms: ["Windows", "Android", "iOS"]
+    last_verified: "2026-11-04"
+    sources: ["https://techno360.in/psiphon-review-2026/", "https://www.safetydetectives.com/best-vpns/psiphon/"]
+
+  - id: freegate
+    name: Freegate
+    official_url: https://www.dongtaiwang.com
+    status: active
+    free_tier:
+      data_cap: "unlimited (no paid tier exists)"
+      devices: "n/a (portable exe / browser proxy)"
+      countries: "n/a"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Dynaweb proxy network IPs"
+    ip_type: "proxy network"
+    protocols: ["proprietary SSL/TLS-wrapped proxy"]
+    logging: "Anti-censorship tool, not privacy-focused; not designed to hide identity from the operator"
+    platforms: ["Windows (portable exe)", "Android (sideload APK)"]
+    last_verified: "2026-11-04"
+    change_log: "v7.90 released 2026-05-07, still actively maintained"
+    sources: ["https://en.wikipedia.org/wiki/Freegate", "https://freegate.fedi.software/en/windows", "https://www.filecroco.com/download-freegate/"]
+
+  - id: ultrasurf
+    name: UltraSurf
+    official_url: https://ultrasurf.us
+    status: active
+    free_tier:
+      data_cap: "unlimited (100% free, no paid tier exists)"
+      devices: "1"
+      countries: "US only"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "UltraReach proxy network IPs"
+    ip_type: "proxy network"
+    protocols: ["proprietary encryption (HTTPS end-to-end; plain HTTP not encrypted user-to-server)"]
+    logging: "NOT no-logs — 'bare minimum' kept up to 30 days; subject to US law; US (5 Eyes)"
+    platforms: ["Windows", "Android", "iOS", "Chrome extension"]
+    last_verified: "2026-11-04"
+    sources: ["https://www.appbrain.com/app/ultrasurf-vpn-fast-invisible/us.ultrasurf.mobile.ultrasurf", "https://www.wizcase.com/reviews/ultrasurf-vpn/"]
+
+  - id: xvpn
+    name: X-VPN Free
+    official_url: https://xvpn.io
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "1"
+      countries: "26 locations in 15+ countries (manual on mobile, auto on desktop)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["proprietary protocol (AES-256)", "Talaria (new in-house open-source protocol, AGPLv3, free users included — Nov 2026)", "RAM-only servers"]
+    logging: "Zero-log claim; ISAE 3000 no-logs audit by Deloitte Singapore completed 2026-02-28 (published Jun 2026); operated by LightningLink Networks Pte. Ltd., Singapore"
+    platforms: ["Windows", "macOS", "iOS", "Android", "Chromebook", "Chrome extension"]
+    last_verified: "2026-11-04"
+    change_log: "2026-02-28: ISAE 3000 no-logs audit (Deloitte Singapore) completed; operator entity moved to Singapore (LightningLink Networks Pte. Ltd.). 2026-11: Talaria in-house protocol launched for Free and Premium users (Win/macOS/iOS/Android)"
+    sources: ["https://xvpn.io/free-vpn", "https://vpnguide.nz/x-vpn-a-2026-new-zealand-guide/", "https://mspoweruser.com/x-vpn-review/"]
+
+  - id: turbo-vpn
+    name: Turbo VPN Free
+    official_url: https://turbovpn.com
+    status: active
+    free_tier:
+      data_cap: "500 MB/day (majority of 2026 reviews; minority source still claims unlimited)"
+      devices: "1 (evidence now leans 1; previously conflicting)"
+      countries: "3 (DE, SG, US)"
+      signup: "no"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["unclear from public materials (IPsec/OpenVPN/SSR variants listed in comparisons)"]
+    logging: "Privacy concerns — potentially shares data with advertisers; Singapore"
+    platforms: ["Windows", "macOS", "Android", "iOS"]
+    last_verified: "2026-11-04"
+    change_log: "2026-11-04: free data cap changed unlimited -> 500 MB/day per majority of 2026 reviews (WizCase Oct 2026, AllAboutCookies Dec 2025, vpnMentor); minority source (Holafly Aug 2026) still claims unlimited"
+    sources: ["https://www.wizcase.com/reviews/turbo-vpn/", "https://turbo-vpn.en.softonic.com/iphone", "https://www.vpnmentor.com/reviews/turbo-vpn/", "https://allaboutcookies.org/turbo-vpn-review"]
+
+  - id: planet-vpn
+    name: Planet VPN Free
+    official_url: https://freevpnplanet.com
+    status: active
+    free_tier:
+      data_cap: "unlimited"
+      devices: "up to 10"
+      countries: "5-6 (US, UK, FR, DE, NL; ~11 servers)"
+      signup: "no registration"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["StarGuard (proprietary)", "OpenVPN", "IKEv2", "PlanetX"]
+    logging: "No-logs claim NOT audited; PrivacySavvy says connection logs retained despite claim; Romania (outside 5/9/14 Eyes)"
+    platforms: ["Windows", "macOS", "Linux", "Android", "iOS", "browser extensions"]
+    last_verified: "2026-11-04"
+    sources: ["http://security.review42.com/planet-vpn/", "https://freevpnplanet.com/blog/top-5-best-free-vpn-in-2025-pros-and-cons-of-each/"]
+
+  - id: riseup-vpn
+    name: Riseup VPN
+    official_url: https://riseup.net
+    status: active
+    free_tier:
+      data_cap: "unlimited (donation-funded, no paid tier)"
+      devices: "1"
+      countries: "small server list"
+      signup: "no accounts"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Riseup's own datacenter servers"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN via Bitmask/LEAP clients"]
+    logging: "Claims no IP logging; no independent audit; open source; US — complied with 2 sealed FBI warrants 2016-17"
+    platforms: ["Windows", "macOS", "Linux", "Android"]
+    last_verified: "2026-11-04"
+    change_log: "F-Droid 1.6.3 (2026-07-21) under active maintenance — added QUIC obfuscation, bridge hopping"
+    sources: ["https://f-droid.org/en/packages/se.leap.riseupvpn/", "https://thevpnmatrixcom.substack.com/p/is-riseup-vpn-safe-the-honest-answer"]
+
+  - id: calyx-vpn
+    name: CalyxVPN
+    official_url: https://calyxinstitute.org
+    status: active
+    free_tier:
+      data_cap: "unlimited (donation-funded 501(c)(3) nonprofit)"
+      devices: "1"
+      countries: "~15 servers in 8 countries (US, DE, NL, CA, UK, JP, SG, AU)"
+      signup: "no accounts, no personal info"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN via LEAP/Bitmask"]
+    logging: "No-logs claim; periodic IP logging then deletion (per policy notes); annual transparency reports; no independent audit; US (5 Eyes)"
+    platforms: ["Android (F-Droid)"]
+    last_verified: "2026-11-04"
+    change_log: "Temporarily excluded from CalyxOS Android 16 test build (Oct 2026) while org rebuilds capacity; 2026: Elizabeth Eagen became Executive Director (founder departed 2025); Internews grant for Pluggable Transports anti-DPI in CalyxVPN"
+    sources: ["https://privacyproof.online/blog/calyxvpn-history-technology-review", "https://www.itechguides.com/products/calyx-vpn/", "https://calyxinstitute.org/about"]
+
+  - id: avast-vpn-free
+    name: Avast VPN Free
+    official_url: https://www.avast.com/fr-fr/free-vpn
+    status: active
+    free_tier:
+      data_cap: "unlimited per official FAQ — CONFLICTING: another version of the product-page FAQ listed 500 GB/month on 2026-11-05 (Techno360)"
+      devices: "unlimited (smart TVs excluded)"
+      countries: "3 user-chosen locations, locked permanently after confirmation"
+      signup: "Avast account required (email, Google or Apple sign-in)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs (Avast/Gen Digital network)"
+    ip_type: "datacenter"
+    protocols: ["WireGuard (free)", "kill switch included; OpenVPN/Mimic, split tunnelling, Double VPN are Premium-only"]
+    logging: "No-logs claim; NO independent audit published — VerSprite annual no-logs audit commissioned, first report expected Nov 2026 (per Frandroid via Techno360); FTC Jun 2024 order: $16.5M, banned from selling browsing data (Jumpshot, shut 2020); Czechia (Gen Digital, US)"
+    platforms: ["Windows", "macOS", "Android", "iOS (via Avast One app; no Linux)"]
+    last_verified: "2026-11-07"
+    change_log: "2026-11-04: new permanent free tier launched in France (previously only 60-day trial or 5 GB/week Avast One VPN); English free-VPN pages returned 404 as of 2026-11-05; VPN unavailable in India (CERT-In 2022 rules)"
+    sources: ["https://www.avast.com/fr-fr/free-vpn", "https://techno360.in/avast-free-vpn-review-india-blocked/"]
+
+  - id: okayfreedom
+    name: OkayFreedom VPN
+    official_url: https://www.okayfreedom.com
+    status: active
+    free_tier:
+      data_cap: "Android app: up to 30 GB/month (watch a rewarded video ad = 250 MB, max 4/day; unused data carries over); Windows free tier: 2 GB/month ad-supported"
+      devices: "1 (per install; no account)"
+      countries: "location choice available (count not disclosed)"
+      signup: "no account/registration"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Steganos datacenter servers"
+    ip_type: "datacenter"
+    protocols: ["IKEv2/IPsec AES-256 (Android built-in VPN)"]
+    logging: "No activity logs claimed; per-connection records (time, duration, data volume, server) kept up to 90 days; random install ID, no account linkage; ad-financed, pseudonymous usage stats; no independent audit; Germany"
+    platforms: ["Android 13+ (new app, Sep 2026)", "Windows (2 GB/month free tier)"]
+    last_verified: "2026-11-08"
+    change_log: "2026-09: new Android app 'VPN OkayFreedom: Secure Proxy' launched on Google Play (Sep 16-18, 2026); ad-for-data free model, up to 30 GB/month"
+    sources: ["https://play.google.com/store/apps/details?id=com.steganos.freevpn", "https://www.appbrain.com/app/vpn-okayfreedom-secure-proxy/com.steganos.freevpn", "https://go.okayfreedom.com/privacy_android"]
+
+# removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
+# 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
+# 且证明服务恢复有效时，才允许重新加入 entries。
+removed: []
+
+discontinued:
+  - id: samsung-max
+    name: Samsung Max VPN
+    status: discontinued
+    change: "Service shut down entirely (50M+ users)"
+    date: "2026-06-15"
+    source: "https://toolradar.com/blog/samsung-max-vpn-alternatives"
+  - id: kaspersky-vpn
+    name: Kaspersky VPN Secure Connection (free)
+    status: discontinued
+    change: "Free version discontinued in most countries; now 7-day free trial only"
+    date: "~2026-04"
+    source: "https://gizmodo.com/best-vpn/kaspersky-vpn"
+  - id: atlas-vpn
+    name: Atlas VPN
+    status: discontinued
+    change: "Service shut down"
+    date: "2024-04-24"
+    source: "https://ciroapp.com/software/atlas-vpn"
+  - id: google-one-vpn
+    name: Google One VPN
+    status: discontinued
+    change: "Service shut down"
+    date: "2024-06"
+    source: "https://bessy.my/en/blog/reviews/google-vpn"

@@ -1,0 +1,234 @@
+{
+  "checked_at": "2026-11-04T03:32:45.356581+00:00",
+  "results": [
+    {
+      "url": "https://ur.io",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "urnetwork",
+      "name": "URnetwork"
+    },
+    {
+      "url": "https://protonvpn.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "protonvpn",
+      "name": "Proton VPN Free"
+    },
+    {
+      "url": "https://windscribe.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "windscribe",
+      "name": "Windscribe Free"
+    },
+    {
+      "url": "https://www.tunnelbear.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "tunnelbear",
+      "name": "TunnelBear Free"
+    },
+    {
+      "url": "https://hide.me",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "hideme",
+      "name": "hide.me Free"
+    },
+    {
+      "url": "https://privadovpn.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "privadovpn",
+      "name": "PrivadoVPN Free"
+    },
+    {
+      "url": "https://www.avira.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "avira-phantom",
+      "name": "Avira Phantom VPN Free"
+    },
+    {
+      "url": "https://speedify.com",
+      "ok": false,
+      "status": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "id": "speedify",
+      "name": "Speedify Free"
+    },
+    {
+      "url": "https://www.hotspotshield.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "hotspot-shield",
+      "name": "Hotspot Shield Free"
+    },
+    {
+      "url": "https://www.betternet.co",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "betternet",
+      "name": "Betternet"
+    },
+    {
+      "url": "https://www.urban-vpn.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "urban-vpn",
+      "name": "Urban VPN"
+    },
+    {
+      "url": "https://tuxler.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "tuxlervpn",
+      "name": "tuxlerVPN"
+    },
+    {
+      "url": "https://hola.org",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "hola",
+      "name": "Hola VPN"
+    },
+    {
+      "url": "https://www.starvpn.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "starvpn",
+      "name": "StarVPN (Residential VPN)"
+    },
+    {
+      "url": "https://anomivpn.com",
+      "ok": false,
+      "status": null,
+      "error": "RemoteDisconnected: Remote end closed connection without response",
+      "id": "anomi-vpn",
+      "name": "Anomi VPN"
+    },
+    {
+      "url": "https://www.cloudflare.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "cloudflare-warp",
+      "name": "Cloudflare WARP"
+    },
+    {
+      "url": "https://www.opera.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "opera-vpn",
+      "name": "Opera browser VPN"
+    },
+    {
+      "url": "https://www.vpngate.net",
+      "ok": false,
+      "status": null,
+      "error": "RemoteDisconnected: Remote end closed connection without response",
+      "id": "vpngate",
+      "name": "VPN Gate (University of Tsukuba)"
+    },
+    {
+      "url": "https://www.vpnbook.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "vpnbook",
+      "name": "VPNBook"
+    },
+    {
+      "url": "https://lantern.io",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "lantern",
+      "name": "Lantern"
+    },
+    {
+      "url": "https://psiphon.ca",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "psiphon",
+      "name": "Psiphon"
+    },
+    {
+      "url": "https://www.dongtaiwang.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "freegate",
+      "name": "Freegate"
+    },
+    {
+      "url": "https://ultrasurf.us",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "ultrasurf",
+      "name": "UltraSurf"
+    },
+    {
+      "url": "https://xvpn.io",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "xvpn",
+      "name": "X-VPN Free"
+    },
+    {
+      "url": "https://turbovpn.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "turbo-vpn",
+      "name": "Turbo VPN Free"
+    },
+    {
+      "url": "https://freevpnplanet.com",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "planet-vpn",
+      "name": "Planet VPN Free"
+    },
+    {
+      "url": "https://riseup.net",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "riseup-vpn",
+      "name": "Riseup VPN"
+    },
+    {
+      "url": "https://calyxinstitute.org",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "id": "calyx-vpn",
+      "name": "CalyxVPN"
+    }
+  ],
+  "summary": {
+    "total": 28,
+    "ok": 25,
+    "failed": 3
+  }
+}

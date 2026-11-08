@@ -70,3 +70,22 @@
 - **每周一复核**：检测官网可达性 → 搜索免费档变更 → 更新条目；确认无效的条目从列表删除，记入 `removed`（墓碑记录：删除日期、原因、证据来源）。
 - **每日检索**：搜索新免费 VPN → 核实后入库；入库前比对 `removed`/`discontinued`，按信息新旧日期避免重复添加已确认无效的服务——除非有更新的证据表明其恢复有效。
 - 有变化时在聊天中汇报；无变化时保持安静。
+
+## 页面生成与部署
+
+可浏览页面由 `page/generate.py` 从 `free-vpn-db.yaml` 生成，输出为自包含单文件 `page/index.html`（无外部依赖、无后端，搜索与筛选在浏览器本地完成）。
+
+```bash
+# 1. 改完 YAML 后重新生成页面
+python3 page/generate.py        # 需要 PyYAML；输出 page/index.html（30 条、29 已核实、家宽 6）
+
+# 2. 提交并推送
+git add -A && git commit -m "更新数据库" && git push
+```
+
+部署（二选一）：
+
+- **静态托管（推荐）**：把 `page/index.html` 放到任意静态服务器根目录即可，如 nginx / Caddy / GitHub Pages / Cloudflare Pages；每次数据更新后重新生成并重新部署该文件。
+- **本地直接打开**：双击 `page/index.html` 即可浏览，全部功能可用；也可以 `python3 -m http.server --directory page` 后访问 http://localhost:8000。
+
+另有 `export_page_sync.py`：把 YAML 导出为 Markdown 快照，供 Muse 聊天内的数据库页面（artifact）同步使用，与本页生成器互不依赖。

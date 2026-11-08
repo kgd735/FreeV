@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-/** 构建：校验 free-vpn-db.yaml，并把页面运行时需要的文件准备好。
- * - 复制 free-vpn-db.yaml -> page/free-vpn-db.yaml（页面用 fetch 加载它）
- * - 确保 page/vendor/js-yaml.min.js 存在（浏览器端 YAML 解析器）
+/** 构建：校验 free-vpn-db.yaml，并确保页面运行时需要的文件就位。
+ * - 校验 YAML schema（entries 数组、必填字段、residential_ip.has 取值）
+ * - 确保 vendor/js-yaml.min.js 存在（浏览器端 YAML 解析器）
+ * 页面直接加载仓库根目录的 free-vpn-db.yaml，无需复制数据文件。
  * 用法: node scripts/build.js
  */
 const fs = require("node:fs");
@@ -10,9 +11,8 @@ const yaml = require("js-yaml");
 
 const ROOT = path.resolve(__dirname, "..");
 const DB_PATH = path.join(ROOT, "free-vpn-db.yaml");
-const PAGE_YAML = path.join(ROOT, "page", "free-vpn-db.yaml");
 const VENDOR_SRC = path.join(ROOT, "node_modules", "js-yaml", "dist", "js-yaml.min.js");
-const VENDOR_DST = path.join(ROOT, "page", "vendor", "js-yaml.min.js");
+const VENDOR_DST = path.join(ROOT, "vendor", "js-yaml.min.js");
 
 function main() {
   const text = fs.readFileSync(DB_PATH, "utf8");
@@ -32,9 +32,6 @@ function main() {
     }
   }
 
-  fs.mkdirSync(path.dirname(PAGE_YAML), { recursive: true });
-  fs.copyFileSync(DB_PATH, PAGE_YAML);
-
   fs.mkdirSync(path.dirname(VENDOR_DST), { recursive: true });
   if (!fs.existsSync(VENDOR_DST)) {
     fs.copyFileSync(VENDOR_SRC, VENDOR_DST);
@@ -42,7 +39,7 @@ function main() {
 
   const active = db.entries.filter((e) => e.status === "active").length;
   const res = db.entries.filter((e) => e.residential_ip.has === true || e.residential_ip.has === "partial").length;
-  console.log(`build ok: ${db.entries.length} entries (${active} active, ${res} residential), page/free-vpn-db.yaml 已同步`);
+  console.log(`build ok: ${db.entries.length} entries (${active} active, ${res} residential)`);
 }
 
 main();

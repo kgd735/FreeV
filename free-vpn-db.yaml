@@ -598,6 +598,27 @@ entries:
     change_log: "2026-09: new Android app 'VPN OkayFreedom: Secure Proxy' launched on Google Play (Sep 16-18, 2026); ad-for-data free model, up to 30 GB/month"
     sources: ["https://play.google.com/store/apps/details?id=com.steganos.freevpn", "https://www.appbrain.com/app/vpn-okayfreedom-secure-proxy/com.steganos.freevpn", "https://go.okayfreedom.com/privacy_android"]
 
+  - id: govpn
+    name: GoVPN
+    official_url: https://www.govpn.space
+    status: active
+    free_tier:
+      data_cap: "unlimited (per Google Play listing; official site silent on cap; free tier shows ads, standard speeds)"
+      devices: "1 (not stated; multi-device listed as Premium upgrade)"
+      countries: "select free locations (count undisclosed; full 50+ countries is Premium)"
+      signup: "no account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs (own 300+ servers); no residential/P2P feature"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN", "AES-256"]
+    logging: "Strict no-logs claim on official site; NO independent audit; operator Nextgen Networks Slt Limited (jurisdiction not disclosed)"
+    platforms: ["Android", "iOS"]
+    last_verified: "2026-11-09"
+    change_log: "2026-11-02: GoVPN 2.0 relaunched (redesigned apps + official site govpn.space); free tier $0/forever retained; 500K+ users, 4.8-star app rating claimed"
+    sources: ["https://www.govpn.space/", "https://www.govpn.space/blog/govpn-2-launch", "https://play.google.com/store/apps/details?id=com.free.vpn.turbo.fast.secure.govpn"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

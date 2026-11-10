@@ -619,6 +619,48 @@ entries:
     change_log: "2026-11-02: GoVPN 2.0 relaunched (redesigned apps + official site govpn.space); free tier $0/forever retained; 500K+ users, 4.8-star app rating claimed"
     sources: ["https://www.govpn.space/", "https://www.govpn.space/blog/govpn-2-launch", "https://play.google.com/store/apps/details?id=com.free.vpn.turbo.fast.secure.govpn"]
 
+  - id: vessel
+    name: Vessel
+    official_url: https://vessel.anoni.net
+    status: active
+    free_tier:
+      data_cap: "50 GB/month per account"
+      devices: "undisclosed (per-device configs; invite-only)"
+      countries: "3 (Taipei, Tokyo, Singapore; optional Taipei-entry relay routes)"
+      signup: "invite code required (newsletter subscribers; no email, 16-digit account number)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter nodes (Taipei hosted by Greenhost; Tokyo/Singapore other providers)"
+    ip_type: "datacenter"
+    protocols: ["AmneziaWG (WireGuard fork with obfuscation)"]
+    logging: "No-logs claim: nodes do not log destinations/times, DNS resolver logs nothing, firewall logs off; no independent audit; open-source code on GitHub; terms/privacy still drafts; community-run (anoni.net, Taiwan)"
+    platforms: ["Windows", "macOS", "Linux", "Android", "iOS (via AmneziaWG app)"]
+    last_verified: "2026-11-10"
+    change_log: "2026-11-07: announced by anoni.net (first invite codes sent 2026-10-28; open by invitation); 50 GB/month; DNS filtering with HaGeZi + Taiwan 165 scam lists"
+    sources: ["https://vessel.anoni.net/", "https://anoni.net/en/updates/2026/11/2026-vessel-launch/"]
+
+  - id: firefox-vpn
+    name: Firefox built-in VPN
+    official_url: https://blog.mozilla.org/en/firefox/built-in-vpn/
+    status: active
+    free_tier:
+      data_cap: "50 GB/month (shared desktop + mobile; pauses at limit until next cycle)"
+      devices: "1 (Mozilla account; desktop + Android)"
+      countries: "29 rollout countries; 6 selectable locations on desktop (US, CO, DE, JP, ZA, AU)"
+      signup: "free Mozilla account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Fastly datacenter proxy IPs"
+    ip_type: "datacenter (browser proxy)"
+    protocols: ["TLS proxy via Fastly (browser-only, not full-device VPN)"]
+    logging: "Mozilla: does not sell browsing data, no ads injected; aggregate usage shared by proxy provider for usage display; no independent audit found for this feature"
+    platforms: ["Windows", "macOS", "Linux", "Android (Firefox browser only; no iOS yet)"]
+    last_verified: "2026-11-10"
+    change_log: "2026-03-24: launched in Firefox 149 (US/UK/DE/FR beta); location selection added 2026-05-19; Android rollout from 2026-07-28; 29 countries as of Jul 2026"
+    sources: ["https://blog.mozilla.org/en/firefox/built-in-vpn/", "https://connect.mozilla.org/t5/discussions/introducing-firefox-s-built-in-vpn-ip-protection-now-in-the/m-p/120550#M47219", "https://gizmodo.com/best-vpn/mozilla-vpn/firefox-vpn"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

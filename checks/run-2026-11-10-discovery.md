@@ -60,6 +60,10 @@
 - Muse artifact 网页（mian-fei-vpn-shu-ju-ku）：已触发 artifact.edit 同步（快照 notes/db-sync.md，32 条）。
 - Git 仓库：sync.sh 已提交并推送到 origin main。
 
+## Artifact 同步结果（handoff 回报）
+- 构建成功并通过核验：页面 DATA 数组 32 条，与 YAML 一致；Vessel 与 Firefox 内置 VPN 卡片均在位，额度/节点/协议/日志/来源均按 YAML 原值抄录；无删除、无新增停服（removed 仍 Anomi 1 条、discontinued 仍 4 条）；家宽统计不变（4 家 + 部分 2 家）；三项来源冲突（TunnelBear 选服、hide.me 免费地点、PrivadoVPN 额度）已加入「尚未核实」区；2026-11-09 变更记录完整保留。
+- 注意：构建已完成，但公开链接仍展示旧版（current_build_published=false）；公开链接需用户明确要求重新分享才会更新，卡片内打开的页面为最新版。
+
 ## 结论
 
 - free-vpn-db.yaml：30 → 32 条 entries；removed 仍为 1 条（Anomi VPN）；discontinued 仍为 4 条。

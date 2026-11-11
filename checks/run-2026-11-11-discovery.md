@@ -63,8 +63,8 @@
 
 ## 同步
 
-- Muse artifact 网页（mian-fei-vpn-shu-ju-ku）：待触发 artifact.edit 同步（快照 notes/db-sync.md，34 条）。
-- Git 仓库：待运行 sync.sh 提交并推送到 origin main。
+- Muse artifact 网页（mian-fei-vpn-shu-ju-ku）：artifact.edit 构建成功并通过核验：页面 DATA 数组 34 条，与 YAML 一致；Teal VPN 与 VPN PRO 89 卡片均在位，额度/节点/协议/日志/来源均按 YAML 原值抄录；Firefox 内置 VPN 已按节日活动口径更新（2026-11-10 至 2027-01-31 不限量，平常 50 GB/月）并补 ghacks 来源；家宽统计不变（4 家 + 部分 2 家）；removed 仍 Anomi 1 条、discontinued 仍 4 条；三项来源冲突（TunnelBear 选服、hide.me 免费地点、PrivadoVPN 额度）仍在「尚未核实」区。
+- 注意：构建已完成，但公开链接仍展示旧版（current_build_published=false）；公开链接需用户明确要求重新分享才会更新，卡片内打开的页面为最新版。
 
 ## 结论
 

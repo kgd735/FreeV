@@ -645,9 +645,9 @@ entries:
     official_url: https://blog.mozilla.org/en/firefox/built-in-vpn/
     status: active
     free_tier:
-      data_cap: "50 GB/month (shared desktop + mobile; pauses at limit until next cycle)"
+      data_cap: "unlimited 2026-11-10 to 2027-01-31 (holiday offer; normally 50 GB/month, pauses at limit until next cycle)"
       devices: "1 (Mozilla account; desktop + Android)"
-      countries: "29 rollout countries; 6 selectable locations on desktop (US, CO, DE, JP, ZA, AU)"
+      countries: "29 rollout countries; location selection across launched countries (per Mozilla May 2026 update)"
       signup: "free Mozilla account required"
       card_required: false
     residential_ip:
@@ -657,9 +657,51 @@ entries:
     protocols: ["TLS proxy via Fastly (browser-only, not full-device VPN)"]
     logging: "Mozilla: does not sell browsing data, no ads injected; aggregate usage shared by proxy provider for usage display; no independent audit found for this feature"
     platforms: ["Windows", "macOS", "Linux", "Android (Firefox browser only; no iOS yet)"]
-    last_verified: "2026-11-10"
-    change_log: "2026-03-24: launched in Firefox 149 (US/UK/DE/FR beta); location selection added 2026-05-19; Android rollout from 2026-07-28; 29 countries as of Jul 2026"
-    sources: ["https://blog.mozilla.org/en/firefox/built-in-vpn/", "https://connect.mozilla.org/t5/discussions/introducing-firefox-s-built-in-vpn-ip-protection-now-in-the/m-p/120550#M47219", "https://gizmodo.com/best-vpn/mozilla-vpn/firefox-vpn"]
+    last_verified: "2026-11-11"
+    change_log: "2026-03-24: launched in Firefox 149 (US/UK/DE/FR beta); location selection added 2026-05-19; Android rollout from 2026-07-28; 29 countries as of Jul 2026. 2026-11-10: Mozilla lifted the data cap — unlimited data through 2027-01-31 (holiday offer); cap status after Feb 1, 2027 unannounced"
+    sources: ["https://blog.mozilla.org/en/firefox/built-in-vpn/", "https://connect.mozilla.org/t5/discussions/introducing-firefox-s-built-in-vpn-ip-protection-now-in-the/m-p/120550#M47219", "https://gizmodo.com/best-vpn/mozilla-vpn/firefox-vpn", "https://www.ghacks.net/2026/11/10/firefoxs-free-built-in-vpn-gets-unlimited-data-from-november-10-through-january-31-2027/"]
+
+  - id: teal-vpn
+    name: Teal VPN
+    official_url: https://tealvpn.com
+    status: active
+    free_tier:
+      data_cap: "500 MB/day"
+      devices: "2"
+      countries: "1 free location (Lithuania; Pro adds DE, US, JP; 14 locations total)"
+      signup: "sign-in required (Google, Apple or email)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs (hosting providers)"
+    ip_type: "datacenter"
+    protocols: ["Teal Secure protocol (proprietary, with traffic obfuscation)"]
+    logging: "No-logs claim: no browsing/DNS logs, source IP not stored; keeps sign-in ID, device public key and byte count; website uses Google Analytics/Ads tags; NO independent audit; transparency figures self-reported; Fxolio LLC, Wyoming, US"
+    platforms: ["Android", "Windows", "macOS", "Linux", "Android TV (iOS in testing, not on App Store yet)"]
+    last_verified: "2026-11-11"
+    change_log: "2026-10: launched on Google Play (Oct 2026; 13k installs, v1.2.57 on 2026-11-01); privacy policy updated 2026-11-10; terms updated 2026-11-01"
+    sources: ["https://tealvpn.com/", "https://tealvpn.com/privacy", "https://www.tealvpn.com/terms", "https://www.appbrain.com/app/teal-vpn-fast-private-vpn/com.tealvpn.client"]
+
+  - id: vpn-pro-89
+    name: VPN PRO 89
+    official_url: https://www.vpnpro89.com
+    status: active
+    free_tier:
+      data_cap: "unlimited (no paid tier, no artificial limit; donation-funded)"
+      devices: "1 (no account)"
+      countries: "undisclosed count (node catalogue by country; own + community nodes)"
+      signup: "no account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Own nodes in hosted infrastructure (datacenter); community nodes run by third parties"
+    ip_type: "datacenter / community nodes"
+    protocols: ["VLESS with XTLS-Reality", "Shadowsocks (Android)", "Tor routing", "Xray-core engine"]
+    logging: "Own nodes: no logging of connections/destinations/content (operator claim); community nodes: logging unknown; website/catalogue proxy keeps IP, date, path ~5 weeks; no analytics/ads SDKs in app; NO independent audit; single individual operator (Frank Wadskier)"
+    platforms: ["Android 8.0+ (stable, full tunnel)", "Windows beta (local proxy)", "Linux beta (local proxy)", "macOS via MCP only; no iOS"]
+    last_verified: "2026-11-11"
+    change_log: "Android stable v1.0.101-PRO released 2026-10-30; Windows beta v0.2.7 2026-10-24; Linux beta v0.1.0 2026-09-08"
+    sources: ["https://www.vpnpro89.com/en/"]
 
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date

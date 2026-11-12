@@ -703,6 +703,27 @@ entries:
     change_log: "Android stable v1.0.101-PRO released 2026-10-30; Windows beta v0.2.7 2026-10-24; Linux beta v0.1.0 2026-09-08"
     sources: ["https://www.vpnpro89.com/en/"]
 
+  - id: ninja-vpn
+    name: Ninja VPN
+    official_url: https://ninjavpn.app
+    status: active
+    free_tier:
+      data_cap: "unlimited (free mode: short ad before connecting; single session max 6 hours, then reconnect)"
+      devices: "1 (Android only)"
+      countries: "40+ free (60+ on Premium)"
+      signup: "no registration"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; datacenter IPs presumed"
+    ip_type: "datacenter"
+    protocols: ["WireGuard", "Stealth (proprietary obfuscation, auto-selected)"]
+    logging: "No-logs claim (no activity logs, no IP/email/connection times stored per Sep 12 2026 policy); traffic volume/session duration tied to anonymous install ID processed temporarily; Google AdMob ads (may be personalized), Firebase/Google Analytics; Play Data safety: collects app activity, performance data, device IDs, data can't be deleted; NO independent audit; BVI jurisdiction (Ninja VPN Ltd., reg. no. 2161939)"
+    platforms: ["Android 8.0+ only (iOS/Windows/browser extensions only planned)"]
+    last_verified: "2026-11-12"
+    change_log: "2026-09-12: developer stopped operating in Russia, Iran and China (no install button in Russian Play storefront). 2026-11-11: Bessy review verified official site ninjavpn.app exists (template-style; site claims 500+ servers, Double VPN, 10 devices, OpenVPN/IKEv2 — not reflected on Play listing, go by listing and ToS). Multiple same-name apps exist (HEROIC's NinjaVPN, ninjavpn.org) — this entry is Ninja VPN Ltd., Play id app.ninjavpn.android, 10M+ installs, v1.4.12 (2026-10-12)"
+    sources: ["https://ninjavpn.app/", "https://play.google.com/store/apps/details?id=app.ninjavpn.android", "https://bessy.my/en/blog/reviews/ninja-vpn"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。
@@ -738,3 +759,9 @@ discontinued:
     change: "Service shut down"
     date: "2024-06"
     source: "https://bessy.my/en/blog/reviews/google-vpn"
+  - id: surfeasy-vpn
+    name: SurfEasy VPN
+    status: discontinued
+    change: "Service shut down entirely on 2026-09-01 (free tier included); eligible users moved to Norton VPN at no extra cost"
+    date: "2026-09-01"
+    source: "https://www.thebestvpnreviews.com/blog/surfeasy-vpn-alternatives"

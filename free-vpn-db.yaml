@@ -729,7 +729,7 @@ entries:
     official_url: https://www.cyberghostvpn.com/download/chrome-vpn
     status: active
     free_tier:
-      data_cap: "unlimited (per top10vpn 2026-09-30; one 2026 roundup lists 'limited' — unverified)"
+      data_cap: "unlimited (CyberGhost's own Chrome Web Store & Firefox Add-ons listings: 'Unlimited Bandwidth: We never cap your browsing, streaming, or gaming')"
       devices: "browser only (no account required)"
       countries: "4 (US, DE, NL, RO); 8 servers"
       signup: "no account/email required"
@@ -742,8 +742,8 @@ entries:
     logging: "Strict no-logs claim for the full service, Deloitte-audited, quarterly transparency reports; extension itself is a proxy — Firefox add-on page warns it does not protect against WebRTC leaks; top10vpn (2026-09-30) found real-IP leaks in tests — do not use for privacy-sensitive activity; Romania (Kape-owned)"
     platforms: ["Chrome extension", "Firefox extension"]
     last_verified: "2026-11-13"
-    change_log: "Free-forever browser proxy (not a trial); full-device VPN remains paid-only (24h desktop trial, 3-day Android, 7-day iOS, 45-day money-back). 2026-11-13: added — official support page confirms extensions are free with no account; terms corroborated by TechRepublic, top10vpn (2026-09-30) and umatechnology (checked 2026-10-07)"
-    sources: ["https://www.cyberghostvpn.com/download/chrome-vpn", "https://support.cyberghostvpn.com/hc/en-us/articles/360016419880-Where-Can-I-Download-the-Latest-Version-of-CyberGhost-VPN", "https://addons.mozilla.org/en-US/firefox/addon/cyberghost-vpn-free-proxy/", "https://www.top10vpn.com/guides/get-cyberghost-for-free/", "https://www.techrepublic.com/article/best-chrome-vpn-extensions/"]
+    change_log: "Free-forever browser proxy (not a trial); full-device VPN remains paid-only (24h desktop trial, 3-day Android, 7-day iOS, 45-day money-back). 2026-11-13: added — official support page confirms extensions are free with no account; terms corroborated by TechRepublic, top10vpn (2026-09-30) and umatechnology (checked 2026-10-07). 2026-11-13: data-cap conflict resolved — CyberGhost's own Chrome Web Store & Firefox Add-ons listings state unlimited bandwidth; the single 'limited' claim came from one low-authority review with no official backing."
+    sources: ["https://www.cyberghostvpn.com/download/chrome-vpn", "https://support.cyberghostvpn.com/hc/en-us/articles/360016419880-Where-Can-I-Download-the-Latest-Version-of-CyberGhost-VPN", "https://addons.mozilla.org/en-US/firefox/addon/cyberghost-vpn-free-proxy/", "https://chromewebstore.google.com/detail/cyberghost-vpn-%E2%80%93-proxy-fo/ffbkglfijbcbgblgflchnbphjdllaogb?hl=en", "https://www.top10vpn.com/guides/get-cyberghost-for-free/", "https://www.techrepublic.com/article/best-chrome-vpn-extensions/"]
 
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date

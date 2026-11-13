@@ -657,9 +657,9 @@ entries:
     protocols: ["TLS proxy via Fastly (browser-only, not full-device VPN)"]
     logging: "Mozilla: does not sell browsing data, no ads injected; aggregate usage shared by proxy provider for usage display; no independent audit found for this feature"
     platforms: ["Windows", "macOS", "Linux", "Android (Firefox browser only; no iOS yet)"]
-    last_verified: "2026-11-11"
-    change_log: "2026-03-24: launched in Firefox 149 (US/UK/DE/FR beta); location selection added 2026-05-19; Android rollout from 2026-07-28; 29 countries as of Jul 2026. 2026-11-10: Mozilla lifted the data cap — unlimited data through 2027-01-31 (holiday offer); cap status after Feb 1, 2027 unannounced"
-    sources: ["https://blog.mozilla.org/en/firefox/built-in-vpn/", "https://connect.mozilla.org/t5/discussions/introducing-firefox-s-built-in-vpn-ip-protection-now-in-the/m-p/120550#M47219", "https://gizmodo.com/best-vpn/mozilla-vpn/firefox-vpn", "https://www.ghacks.net/2026/11/10/firefoxs-free-built-in-vpn-gets-unlimited-data-from-november-10-through-january-31-2027/"]
+    last_verified: "2026-11-13"
+    change_log: "2026-03-24: launched in Firefox 149 (US/UK/DE/FR beta); location selection added 2026-05-19; Android rollout from 2026-07-28; 29 countries as of Jul 2026. 2026-11-10: Mozilla lifted the data cap — unlimited data through 2027-01-31 (holiday offer). 2026-11-12: Mozilla confirmed the 50 GB/month cap returns 2027-02-01 00:00 UTC, with a reminder before the offer ends (betanews)"
+    sources: ["https://blog.mozilla.org/en/firefox/built-in-vpn/", "https://connect.mozilla.org/t5/discussions/introducing-firefox-s-built-in-vpn-ip-protection-now-in-the/m-p/120550#M47219", "https://gizmodo.com/best-vpn/mozilla-vpn/firefox-vpn", "https://www.ghacks.net/2026/11/10/firefoxs-free-built-in-vpn-gets-unlimited-data-from-november-10-through-january-31-2027/", "https://betanews.com/article/firefox-free-vpn-50gb-cap-removed/"]
 
   - id: teal-vpn
     name: Teal VPN
@@ -723,6 +723,27 @@ entries:
     last_verified: "2026-11-12"
     change_log: "2026-09-12: developer stopped operating in Russia, Iran and China (no install button in Russian Play storefront). 2026-11-11: Bessy review verified official site ninjavpn.app exists (template-style; site claims 500+ servers, Double VPN, 10 devices, OpenVPN/IKEv2 — not reflected on Play listing, go by listing and ToS). Multiple same-name apps exist (HEROIC's NinjaVPN, ninjavpn.org) — this entry is Ninja VPN Ltd., Play id app.ninjavpn.android, 10M+ installs, v1.4.12 (2026-10-12)"
     sources: ["https://ninjavpn.app/", "https://play.google.com/store/apps/details?id=app.ninjavpn.android", "https://bessy.my/en/blog/reviews/ninja-vpn"]
+
+  - id: cyberghost-extension
+    name: CyberGhost free browser extension
+    official_url: https://www.cyberghostvpn.com/download/chrome-vpn
+    status: active
+    free_tier:
+      data_cap: "unlimited (per top10vpn 2026-09-30; one 2026 roundup lists 'limited' — unverified)"
+      devices: "browser only (no account required)"
+      countries: "4 (US, DE, NL, RO); 8 servers"
+      signup: "no account/email required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs (CyberGhost/Kape network)"
+    ip_type: "datacenter (browser proxy)"
+    protocols: ["HTTPS proxy (browser-only; NOT a full-device VPN tunnel)"]
+    logging: "Strict no-logs claim for the full service, Deloitte-audited, quarterly transparency reports; extension itself is a proxy — Firefox add-on page warns it does not protect against WebRTC leaks; top10vpn (2026-09-30) found real-IP leaks in tests — do not use for privacy-sensitive activity; Romania (Kape-owned)"
+    platforms: ["Chrome extension", "Firefox extension"]
+    last_verified: "2026-11-13"
+    change_log: "Free-forever browser proxy (not a trial); full-device VPN remains paid-only (24h desktop trial, 3-day Android, 7-day iOS, 45-day money-back). 2026-11-13: added — official support page confirms extensions are free with no account; terms corroborated by TechRepublic, top10vpn (2026-09-30) and umatechnology (checked 2026-10-07)"
+    sources: ["https://www.cyberghostvpn.com/download/chrome-vpn", "https://support.cyberghostvpn.com/hc/en-us/articles/360016419880-Where-Can-I-Download-the-Latest-Version-of-CyberGhost-VPN", "https://addons.mozilla.org/en-US/firefox/addon/cyberghost-vpn-free-proxy/", "https://www.top10vpn.com/guides/get-cyberghost-for-free/", "https://www.techrepublic.com/article/best-chrome-vpn-extensions/"]
 
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date

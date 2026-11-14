@@ -745,6 +745,48 @@ entries:
     change_log: "Free-forever browser proxy (not a trial); full-device VPN remains paid-only (24h desktop trial, 3-day Android, 7-day iOS, 45-day money-back). 2026-11-13: added — official support page confirms extensions are free with no account; terms corroborated by TechRepublic, top10vpn (2026-09-30) and umatechnology (checked 2026-10-07). 2026-11-13: data-cap conflict resolved — CyberGhost's own Chrome Web Store & Firefox Add-ons listings state unlimited bandwidth; the single 'limited' claim came from one low-authority review with no official backing."
     sources: ["https://www.cyberghostvpn.com/download/chrome-vpn", "https://support.cyberghostvpn.com/hc/en-us/articles/360016419880-Where-Can-I-Download-the-Latest-Version-of-CyberGhost-VPN", "https://addons.mozilla.org/en-US/firefox/addon/cyberghost-vpn-free-proxy/", "https://chromewebstore.google.com/detail/cyberghost-vpn-%E2%80%93-proxy-fo/ffbkglfijbcbgblgflchnbphjdllaogb?hl=en", "https://www.top10vpn.com/guides/get-cyberghost-for-free/", "https://www.techrepublic.com/article/best-chrome-vpn-extensions/"]
 
+  - id: berry-vpn
+    name: Berry VPN
+    official_url: https://www.berryvpn.app
+    status: active
+    free_tier:
+      data_cap: "unlimited data; 30-minute sessions, reconnect instantly (watch an ad for +30 min once per session)"
+      devices: "1 (anonymous account linked to the phone; not explicitly stated)"
+      countries: "60 (per official site; country choice or Auto)"
+      signup: "no account/email (anonymous device-linked ID)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; datacenter IPs presumed; servers run by independent network operators"
+    ip_type: "datacenter (presumed)"
+    protocols: ["Berry Protocol (proprietary, per official site)"]
+    logging: "No browsing/content logging claimed (official FAQ); keeps technical records (session start, server used); servers run by independent operators who may keep their own logs; NO independent audit; operator Coin Alarm"
+    platforms: ["Android (Windows & macOS coming soon)"]
+    last_verified: "2026-11-14"
+    change_log: "2026-11-14: added — official site berryvpn.app verified (free tier + FAQ logging statement); v1.3.7 on Google Play (2026-11-06); monitored candidate since 2026-11-11, when no official site was verifiable"
+    sources: ["https://www.berryvpn.app/", "https://www.appbrain.com/app/berry-vpn-fast-secure-proxy/app.berryvpn", "https://play.google.com/store/apps/details?id=app.berryvpn", "https://berry-vpn-fast-secure-proxy.en.softonic.com/android"]
+
+  - id: skyvora-vpn
+    name: Skyvora VPN
+    official_url: https://skyvora.app
+    status: active
+    free_tier:
+      data_cap: "unlimited (no data or time limit)"
+      devices: "no device limit (free)"
+      countries: "9 (NL, DE, FR, ES, US, CA, JP, HK, SG)"
+      signup: "no account/email required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; VLESS + Reality servers (datacenter presumed)"
+    ip_type: "datacenter (VLESS + Reality)"
+    protocols: ["VLESS + Reality"]
+    logging: "No-logs claim: no record of sites visited, no traffic content, no sale of data (privacy policy 2026-11-03); IP visible to server while connected; free version shows Google AdMob ads; Play Data safety: may share Location, App activity + 2 others; NO independent audit; operator Averon Soft (jurisdiction not disclosed)"
+    platforms: ["Android"]
+    last_verified: "2026-11-14"
+    change_log: "2026-11-14: added — official site skyvora.app + privacy policy (2026-11-03) verified; monitored candidate since 2026-11-11, when no official site was verifiable"
+    sources: ["https://skyvora.app/", "https://skyvora.app/privacy.html", "https://www.appbrain.com/app/skyvora-vpn-fast-vpn-proxy/com.skyvora.vpn", "https://play.google.com/store/apps/details?id=com.skyvora.vpn"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

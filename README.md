@@ -70,4 +70,4 @@ npm install
 npx --yes http-server . -p 8000   # 然后访问 http://localhost:8000
 ```
 
-远程仓库：`ssh://git@gits.d35.kdns.fr:2222/kuangdash/FreeVPN.git`（Gitea；deploy key 在 `/home/hatch/.ssh/vpn_db_push_deploy`，不要删除）。
+远程仓库：`git@github.com:kgd735/FreeV.git`（GitHub；deploy key 在 `/home/hatch/.ssh/vpn_db_push_deploy`，不要删除）。

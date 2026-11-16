@@ -3,7 +3,7 @@
 # 维护：每月由定时任务复核更新；每次复核更新 last_full_review 与各条目 last_verified
 # residential_ip.has: true=提供住宅IP出口 / false=机房或代理IP / partial=部分是 / unknown=未知
 schema_version: 1
-last_full_review: "2026-11-09"
+last_full_review: "2026-11-16"
 entries:
   - id: urnetwork
     name: URnetwork
@@ -22,7 +22,7 @@ entries:
     protocols: ["native app", "X25519MLKEM768 post-quantum session (opt-in)", "WireGuard/SOCKS are Pro-only"]
     logging: "Claims no-logs, 100% open source; no independent audit of protocol/connect engine/operator code (stated in own docs)"
     platforms: ["Android", "iOS", "Windows", "macOS", "Linux", "browser extension"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://ur.io/products", "https://ur.io/docs/faq"]
 
   - id: protonvpn
@@ -42,7 +42,7 @@ entries:
     protocols: ["WireGuard", "OpenVPN", "IKEv2", "Stealth"]
     logging: "Strict no-logs; Securitum audit annually (5th published Jun 2026); SOC 2 Type II (Jul 2025); Switzerland"
     platforms: ["Windows", "macOS", "Linux", "Android", "iOS", "browser extension"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://protonvpn.com/free-vpn"]
 
   - id: windscribe
@@ -62,7 +62,7 @@ entries:
     protocols: ["WireGuard", "OpenVPN", "IKEv2", "Stealth", "WStunnel"]
     logging: "No-logs claim; Packetlabs server-software audit (Jun 2024); no published no-logs audit; Canada (5 Eyes)"
     platforms: ["Windows", "macOS", "Linux", "Android", "iOS", "Chrome/Firefox/Edge extensions"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://toolradar.com/blog/best-free-vpn-for-pc", "https://theproofdesk.com/windscribe"]
 
   - id: tunnelbear
@@ -82,9 +82,9 @@ entries:
     protocols: ["WireGuard", "OpenVPN", "IKEv2", "GhostBear obfuscation (Win/Android)"]
     logging: "No-logs claim; Cure53 audits annually since 2016; owned by McAfee; Canada"
     platforms: ["Windows", "macOS", "Android", "iOS", "browser extensions"]
-    last_verified: "2026-11-09"
-    change_log: "2026: free tier downgraded — server choice removed, split tunneling moved to paid"
-    sources: ["https://www.vpn.com/vpn/tunnelbear/", "https://www.wizcase.com/reviews/tunnelbear-vpn/"]
+    last_verified: "2026-11-16"
+    change_log: "2026-11-16: TunnelBear 免费档手动选服冲突已核实——2026 年 1 月更新后免费档由应用自动选服，2 GB/月不变（Gizmodo 2026-11 评测、TechRadar 2026-01-27）"
+    sources: ["https://www.vpn.com/vpn/tunnelbear/", "https://www.wizcase.com/reviews/tunnelbear-vpn/", "https://gizmodo.com/best-vpn/tunnelbear"]
 
   - id: hideme
     name: hide.me Free
@@ -93,7 +93,7 @@ entries:
     free_tier:
       data_cap: "unlimited"
       devices: "1"
-      countries: "7 countries / 8 locations (FI, FR, DE, NL, CH, UK, US)"
+      countries: "7 countries (FI, FR, DE, NL, CH, UK, US; Singapore is paid-only)"
       signup: "no registration required"
       card_required: false
     residential_ip:
@@ -103,8 +103,9 @@ entries:
     protocols: ["WireGuard", "IKEv2", "OpenVPN", "SoftEther (desktop obfuscation)"]
     logging: "Certified zero-log claim reviewed by Securitum; transparency reports since 2012; Malaysia"
     platforms: ["Windows", "macOS", "Linux (CLI)", "Android", "iOS"]
-    last_verified: "2026-11-09"
-    sources: ["https://hide.me/en/pricing", "https://www.esecurityplanet.com/products/best-free-vpn/"]
+    last_verified: "2026-11-16"
+    change_log: "2026-11-16: 免费地点冲突已核实——新加坡为付费档，免费为 7 国（Gizmodo 2026-11 多篇评测一致；VPNMentor 称 8 地含新加坡的说法已过时）"
+    sources: ["https://hide.me/en/pricing", "https://www.esecurityplanet.com/products/best-free-vpn/", "https://gizmodo.com/best-vpn/free/china"]
 
   - id: privadovpn
     name: PrivadoVPN Free
@@ -123,9 +124,9 @@ entries:
     protocols: ["OpenVPN", "IKEv2", "WireGuard", "Scramble obfuscation (mobile)"]
     logging: "No-logs claim NOT independently audited; operated by Privado Networks ehf. (Iceland) since 2026-05-01 (Swiss entity retained for payment processing only)"
     platforms: ["Windows", "macOS", "Android", "iOS", "Android TV", "Fire TV", "tvOS"]
-    last_verified: "2026-11-09"
-    change_log: "2026-05: jurisdiction moved Switzerland -> Iceland (confirmed by vpn.com, TechRadar; Gizmodo Oct 2026: free plan requires monthly in-app renewal)"
-    sources: ["https://www.vpn.com/vpn/privadovpn/", "http://safelyo.com/reviews/privadovpn/", "https://gizmodo.com/best-vpn/free", "https://thehightechsociety.com/best-free-vpn/"]
+    last_verified: "2026-11-16"
+    change_log: "2026-05: jurisdiction moved Switzerland -> Iceland (confirmed by vpn.com, TechRadar; Gizmodo Oct 2026: free plan requires monthly in-app renewal). 2026-11-16: 免费额度冲突已核实——10 GB/月后降速至 1 Mbps、13 地 10 国、1 台设备、每月手动续期（Gizmodo 2026-11 多篇评测一致）"
+    sources: ["https://www.vpn.com/vpn/privadovpn/", "http://safelyo.com/reviews/privadovpn/", "https://gizmodo.com/best-vpn/free", "https://thehightechsociety.com/best-free-vpn/", "https://gizmodo.com/best-vpn/free/school"]
 
   - id: avira-phantom
     name: Avira Phantom VPN Free
@@ -144,7 +145,7 @@ entries:
     protocols: ["OpenVPN"]
     logging: "No-logs claim; no published independent audit; Germany (14 Eyes)"
     platforms: ["Windows", "macOS", "Android", "iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://gizmodo.com/best-vpn/avira-vpn", "https://www.security.org/vpn/avira-phantom/"]
 
   - id: speedify
@@ -164,7 +165,7 @@ entries:
     protocols: ["proprietary channel-bonding protocol"]
     logging: "No-logs claim; no widely cited independent audit; US"
     platforms: ["Windows", "macOS", "Android", "iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-11-09: registered free account now 5 GB/month (BearVPN audit of official pages, Oct 28 2026); 2 GB/month without registration. One Sep 2026 Play review claimed the free plan was removed — contradicted by official listings and multiple Oct/Nov 2026 reviews"
     sources: ["https://www.wizcase.com/reviews/speedify-vpn/", "https://www.security.org/vpn/speedify-vpn/", "https://bearvpn.com/research/free-vpn-plan-limits/"]
 
@@ -185,7 +186,7 @@ entries:
     protocols: ["Catapult Hydra (proprietary)"]
     logging: "NOT no-logs — keeps anonymized domain records + device ID used for marketing; owned by Aura; US"
     platforms: ["Windows", "macOS", "Android", "iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://gizmodo.com/best-vpn/free", "https://www.security.org/vpn/hotspot-shield/"]
 
   - id: betternet
@@ -205,7 +206,7 @@ entries:
     protocols: ["Catapult Hydra (proprietary)"]
     logging: "Claims no activity logs but logs IP address; iOS label lists advertising/location/identifiers/usage data; owned by Aura; US"
     platforms: ["Windows", "macOS", "Android", "iOS", "Chrome/Firefox extensions"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://de.safetydetectives.com/best-vpns/betternet-vpn/post", "https://thebestvpn.com/reviews/betternet/"]
 
   - id: urban-vpn
@@ -225,7 +226,7 @@ entries:
     protocols: ["OpenVPN (per reviewers)", "no kill switch"]
     logging: "EXTENSIVE logging (IP, browsing history, timestamps, cookies, clicks); affiliated with BIScience; Jul 2025 Koi Security: Chrome extension (8M+ installs) harvested AI chat prompts and sold data — subject of ongoing class-action investigation (openclassactions.com, updated ~Aug 2026; Infosecurity Magazine 2026-11-01); no audit; US (5 Eyes)"
     platforms: ["Windows", "macOS", "Android", "iOS", "Chrome/Firefox extensions"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://bearvpn.com/blog/urban-vpn-review/", "https://www.wizcase.com/reviews/urban-vpn/", "https://www.security.org/vpn/urban/", "https://bearvpn.com/research/free-vpn-plan-limits/"]
 
   - id: tuxlervpn
@@ -245,7 +246,7 @@ entries:
     protocols: ["SOCKS5-based"]
     logging: "Limited transparency; reviewers question no-logs claim"
     platforms: ["Windows app", "Chrome/Firefox extensions"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://www.vpnmentor.com/reviews/tuxler/", "https://esim.holafly.com/internet/tuxler-vpn-review/"]
 
   - id: hola
@@ -265,7 +266,7 @@ entries:
     protocols: ["IKEv2/IPsec AES-256 (desktop)", "browser extension is HTTPS proxy"]
     logging: "Conflicting claims (strict no-logging on promo site vs reports of browsing-data logging); no independent audit; Israel"
     platforms: ["Windows", "macOS", "Android", "iOS", "Chrome/Opera/Edge extensions"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://thehightechsociety.com/hola-vpn-review/", "https://www.security.org/vpn/hola/"]
 
   - id: starvpn
@@ -285,7 +286,7 @@ entries:
     protocols: ["OpenVPN", "WireGuard", "AmneziaWG"]
     logging: "No-logs claim; no known independent audit"
     platforms: ["Android", "iOS", "macOS", "Windows"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-08-26: Softonic re-affirmed 90 days/account claim, contradicting official 'free for life' — dispute unresolved. 2026-11-04: vpnmentor 2026 review flags residential IPs as paid-tier feature; free-tier IP type unverified. Duration: Play listing v2.45 (Oct 20 2026) still '100% free for life'; Softonic 90-day claim uncorroborated (may be different app) — leaning free-for-life"
     sources: ["https://play.google.com/store/apps/details?id=com.starvpn", "https://residential-vpn.en.softonic.com/mac", "https://www.appbrain.com/app/starvpn-private-secure-vpn/com.starvpn", "https://www.vpnmentor.com/reviews/starvpn/"]
 
@@ -306,7 +307,7 @@ entries:
     protocols: ["MASQUE (HTTP/3/QUIC) per Oct 2026 docs"]
     logging: "1.1.1.1 privacy policy audited by KPMG (2019); US"
     platforms: ["Windows", "macOS", "Linux", "iOS", "Android"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://windscribe.com/blog/cloudflare-warp-vs-vpn/", "https://www.vpnsmith.com/en/blog/cloudflare-warp-vs-wireguard-self-host-2026"]
 
   - id: opera-vpn
@@ -326,7 +327,7 @@ entries:
     protocols: ["HTTPS/SOCKS5 proxy marketed as VPN (AES-256)"]
     logging: "No-logs claim; Deloitte no-log audit (2024); Cure53 code audit; owned by Chinese consortium (Kunlun Tech) since 2016"
     platforms: ["Opera browser on Windows, macOS, Linux, Android, iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-09-24: free VPN adds opt-in auto-on for public Wi-Fi networks (US/FR desktop first)"
     sources: ["https://blogs.opera.com/security/2026/05/opera-vpn-is-safe/", "https://gizmodo.com/best-vpn/free/unlimited-data", "https://press.opera.com/2026/09/24/opera-free-vpn-can-now-automatically-protect-you-on-public-wi-fi-networks/"]
 
@@ -347,7 +348,7 @@ entries:
     protocols: ["SoftEther", "OpenVPN", "L2TP/IPsec", "MS-SSTP"]
     logging: "KNOWN LOGGING: connection logs incl. user IP kept >=3 months; volunteer servers record traffic >=2 weeks; shared with police/courts; operators can see unencrypted traffic; Japan"
     platforms: ["Windows", "macOS", "Android", "iOS (manual config + third-party apps)"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://www.vpngate.net/en/", "https://foundorasystems.com/best-free-vpn-server-list-for-android-in-2026/"]
 
   - id: vpnbook
@@ -367,7 +368,7 @@ entries:
     protocols: ["OpenVPN", "PPTP", "L2TP/IPsec", "WireGuard"]
     logging: "Retains some user data (conflicting statements: weekly vs daily deletion); not no-logs; Switzerland"
     platforms: ["manual config only (no apps)"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://www.vpnbook.com/freevpn/openvpn", "https://www.vpnblade.net/compare/vpnbook-vs-cyberghost/"]
 
   - id: lantern
@@ -387,7 +388,7 @@ entries:
     protocols: ["proprietary Lantern proxy"]
     logging: "No audited no-logs policy; open source; nonprofit (Brave New Software)"
     platforms: ["Android", "iOS", "Windows", "macOS", "Linux"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://play.google.com/store/apps/details?id=org.getlantern.lantern", "https://www.itechguides.com/products/lantern/"]
 
   - id: psiphon
@@ -407,7 +408,7 @@ entries:
     protocols: ["SSH with obfuscation", "HTTP proxy", "L2TP/IPsec VPN mode"]
     logging: "Not a privacy product — upfront circumvention tool; logs sensitive data; open source; Canada"
     platforms: ["Windows", "Android", "iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://techno360.in/psiphon-review-2026/", "https://www.safetydetectives.com/best-vpns/psiphon/"]
 
   - id: freegate
@@ -427,7 +428,7 @@ entries:
     protocols: ["proprietary SSL/TLS-wrapped proxy"]
     logging: "Anti-censorship tool, not privacy-focused; not designed to hide identity from the operator"
     platforms: ["Windows (portable exe)", "Android (sideload APK)"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "v7.90 released 2026-05-07, still actively maintained"
     sources: ["https://en.wikipedia.org/wiki/Freegate", "https://freegate.fedi.software/en/windows", "https://www.filecroco.com/download-freegate/"]
 
@@ -448,7 +449,7 @@ entries:
     protocols: ["proprietary encryption (HTTPS end-to-end; plain HTTP not encrypted user-to-server)"]
     logging: "NOT no-logs — 'bare minimum' kept up to 30 days; subject to US law; US (5 Eyes)"
     platforms: ["Windows", "Android", "iOS", "Chrome extension"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     sources: ["https://www.appbrain.com/app/ultrasurf-vpn-fast-invisible/us.ultrasurf.mobile.ultrasurf", "https://www.wizcase.com/reviews/ultrasurf-vpn/"]
 
   - id: xvpn
@@ -468,7 +469,7 @@ entries:
     protocols: ["proprietary protocol (AES-256)", "Talaria (new in-house open-source protocol, AGPLv3, free users included — Nov 2026)", "RAM-only servers"]
     logging: "Zero-log claim; ISAE 3000 no-logs audit by Deloitte Singapore completed 2026-02-28 (published Jun 2026); operated by LightningLink Networks Pte. Ltd., Singapore"
     platforms: ["Windows", "macOS", "iOS", "Android", "Chromebook", "Chrome extension"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-02-28: ISAE 3000 no-logs audit (Deloitte Singapore) completed; operator entity moved to Singapore (LightningLink Networks Pte. Ltd.). 2026-11: Talaria in-house protocol launched for Free and Premium users (Win/macOS/iOS/Android)"
     sources: ["https://xvpn.io/free-vpn", "https://vpnguide.nz/x-vpn-a-2026-new-zealand-guide/", "https://mspoweruser.com/x-vpn-review/"]
 
@@ -489,7 +490,7 @@ entries:
     protocols: ["unclear from public materials (IPsec/OpenVPN/SSR variants listed in comparisons)"]
     logging: "Privacy concerns — potentially shares data with advertisers; Singapore"
     platforms: ["Windows", "macOS", "Android", "iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-11-04: free data cap changed unlimited -> 500 MB/day per majority of 2026 reviews (WizCase Oct 2026, AllAboutCookies Dec 2025, vpnMentor); minority source (Holafly Aug 2026) still claims unlimited"
     sources: ["https://www.wizcase.com/reviews/turbo-vpn/", "https://turbo-vpn.en.softonic.com/iphone", "https://www.vpnmentor.com/reviews/turbo-vpn/", "https://allaboutcookies.org/turbo-vpn-review"]
 
@@ -510,7 +511,7 @@ entries:
     protocols: ["StarGuard (proprietary)", "OpenVPN", "IKEv2", "PlanetX"]
     logging: "No-logs claim NOT audited; PrivacySavvy says connection logs retained despite claim; Romania (outside 5/9/14 Eyes)"
     platforms: ["Windows", "macOS", "Linux", "Android", "iOS", "browser extensions"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-01-26: free users are assigned a location (no manual server choice)"
     sources: ["http://security.review42.com/planet-vpn/", "https://freevpnplanet.com/blog/top-5-best-free-vpn-in-2025-pros-and-cons-of-each/", "https://toolradar.com/blog/best-free-vpns"]
 
@@ -531,7 +532,7 @@ entries:
     protocols: ["OpenVPN via Bitmask/LEAP clients"]
     logging: "Claims no IP logging; no independent audit; open source; US — complied with 2 sealed FBI warrants 2016-17"
     platforms: ["Windows", "macOS", "Linux", "Android"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "F-Droid 1.6.3 (2026-07-21) under active maintenance — added QUIC obfuscation, bridge hopping"
     sources: ["https://f-droid.org/en/packages/se.leap.riseupvpn/", "https://thevpnmatrixcom.substack.com/p/is-riseup-vpn-safe-the-honest-answer"]
 
@@ -552,7 +553,7 @@ entries:
     protocols: ["OpenVPN via LEAP/Bitmask"]
     logging: "No-logs claim; periodic IP logging then deletion (per policy notes); annual transparency reports; no independent audit; US (5 Eyes)"
     platforms: ["Android (F-Droid)"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "Temporarily excluded from CalyxOS Android 16 test build (Oct 2026) while org rebuilds capacity; 2026: Elizabeth Eagen became Executive Director (founder departed 2025); Internews grant for Pluggable Transports anti-DPI in CalyxVPN"
     sources: ["https://privacyproof.online/blog/calyxvpn-history-technology-review", "https://www.itechguides.com/products/calyx-vpn/", "https://calyxinstitute.org/about"]
 
@@ -573,7 +574,7 @@ entries:
     protocols: ["WireGuard (free)", "kill switch included; OpenVPN/Mimic, split tunnelling, Double VPN are Premium-only"]
     logging: "No-logs claim; NO independent audit published — VerSprite annual no-logs audit commissioned, first report expected Nov 2026 (per Frandroid via Techno360); FTC Jun 2024 order: $16.5M, banned from selling browsing data (Jumpshot, shut 2020); Czechia (Gen Digital, US)"
     platforms: ["Windows", "macOS", "Android", "iOS (via Avast One app; no Linux)"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-11-04: new permanent free tier launched in France (previously only 60-day trial or 5 GB/week Avast One VPN); English free-VPN pages returned 404 as of 2026-11-05; VPN unavailable in India (CERT-In 2022 rules)"
     sources: ["https://www.avast.com/fr-fr/free-vpn", "https://techno360.in/avast-free-vpn-review-india-blocked/", "https://support.avast.com/en-gb/article/avast-free-vpn-faq"]
 
@@ -594,7 +595,7 @@ entries:
     protocols: ["IKEv2/IPsec AES-256 (Android built-in VPN)"]
     logging: "No activity logs claimed; per-connection records (time, duration, data volume, server) kept up to 90 days; random install ID, no account linkage; ad-financed, pseudonymous usage stats; no independent audit; Germany"
     platforms: ["Android 13+ (new app, Sep 2026)", "Windows (2 GB/month free tier)"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-09: new Android app 'VPN OkayFreedom: Secure Proxy' launched on Google Play (Sep 16-18, 2026); ad-for-data free model, up to 30 GB/month"
     sources: ["https://play.google.com/store/apps/details?id=com.steganos.freevpn", "https://www.appbrain.com/app/vpn-okayfreedom-secure-proxy/com.steganos.freevpn", "https://go.okayfreedom.com/privacy_android"]
 
@@ -615,7 +616,7 @@ entries:
     protocols: ["OpenVPN", "AES-256"]
     logging: "Strict no-logs claim on official site; NO independent audit; operator Nextgen Networks Slt Limited (jurisdiction not disclosed)"
     platforms: ["Android", "iOS"]
-    last_verified: "2026-11-09"
+    last_verified: "2026-11-16"
     change_log: "2026-11-02: GoVPN 2.0 relaunched (redesigned apps + official site govpn.space); free tier $0/forever retained; 500K+ users, 4.8-star app rating claimed"
     sources: ["https://www.govpn.space/", "https://www.govpn.space/blog/govpn-2-launch", "https://play.google.com/store/apps/details?id=com.free.vpn.turbo.fast.secure.govpn"]
 
@@ -636,7 +637,7 @@ entries:
     protocols: ["AmneziaWG (WireGuard fork with obfuscation)"]
     logging: "No-logs claim: nodes do not log destinations/times, DNS resolver logs nothing, firewall logs off; no independent audit; open-source code on GitHub; terms/privacy still drafts; community-run (anoni.net, Taiwan)"
     platforms: ["Windows", "macOS", "Linux", "Android", "iOS (via AmneziaWG app)"]
-    last_verified: "2026-11-10"
+    last_verified: "2026-11-16"
     change_log: "2026-11-07: announced by anoni.net (first invite codes sent 2026-10-28; open by invitation); 50 GB/month; DNS filtering with HaGeZi + Taiwan 165 scam lists"
     sources: ["https://vessel.anoni.net/", "https://anoni.net/en/updates/2026/11/2026-vessel-launch/"]
 
@@ -657,7 +658,7 @@ entries:
     protocols: ["TLS proxy via Fastly (browser-only, not full-device VPN)"]
     logging: "Mozilla: does not sell browsing data, no ads injected; aggregate usage shared by proxy provider for usage display; no independent audit found for this feature"
     platforms: ["Windows", "macOS", "Linux", "Android (Firefox browser only; no iOS yet)"]
-    last_verified: "2026-11-13"
+    last_verified: "2026-11-16"
     change_log: "2026-03-24: launched in Firefox 149 (US/UK/DE/FR beta); location selection added 2026-05-19; Android rollout from 2026-07-28; 29 countries as of Jul 2026. 2026-11-10: Mozilla lifted the data cap — unlimited data through 2027-01-31 (holiday offer). 2026-11-12: Mozilla confirmed the 50 GB/month cap returns 2027-02-01 00:00 UTC, with a reminder before the offer ends (betanews)"
     sources: ["https://blog.mozilla.org/en/firefox/built-in-vpn/", "https://connect.mozilla.org/t5/discussions/introducing-firefox-s-built-in-vpn-ip-protection-now-in-the/m-p/120550#M47219", "https://gizmodo.com/best-vpn/mozilla-vpn/firefox-vpn", "https://www.ghacks.net/2026/11/10/firefoxs-free-built-in-vpn-gets-unlimited-data-from-november-10-through-january-31-2027/", "https://betanews.com/article/firefox-free-vpn-50gb-cap-removed/"]
 
@@ -678,7 +679,7 @@ entries:
     protocols: ["Teal Secure protocol (proprietary, with traffic obfuscation)"]
     logging: "No-logs claim: no browsing/DNS logs, source IP not stored; keeps sign-in ID, device public key and byte count; website uses Google Analytics/Ads tags; NO independent audit; transparency figures self-reported; Fxolio LLC, Wyoming, US"
     platforms: ["Android", "Windows", "macOS", "Linux", "Android TV (iOS in testing, not on App Store yet)"]
-    last_verified: "2026-11-11"
+    last_verified: "2026-11-16"
     change_log: "2026-10: launched on Google Play (Oct 2026; 13k installs, v1.2.57 on 2026-11-01); privacy policy updated 2026-11-10; terms updated 2026-11-01"
     sources: ["https://tealvpn.com/", "https://tealvpn.com/privacy", "https://www.tealvpn.com/terms", "https://www.appbrain.com/app/teal-vpn-fast-private-vpn/com.tealvpn.client"]
 
@@ -699,7 +700,7 @@ entries:
     protocols: ["VLESS with XTLS-Reality", "Shadowsocks (Android)", "Tor routing", "Xray-core engine"]
     logging: "Own nodes: no logging of connections/destinations/content (operator claim); community nodes: logging unknown; website/catalogue proxy keeps IP, date, path ~5 weeks; no analytics/ads SDKs in app; NO independent audit; single individual operator (Frank Wadskier)"
     platforms: ["Android 8.0+ (stable, full tunnel)", "Windows beta (local proxy)", "Linux beta (local proxy)", "macOS via MCP only; no iOS"]
-    last_verified: "2026-11-11"
+    last_verified: "2026-11-16"
     change_log: "Android stable v1.0.101-PRO released 2026-10-30; Windows beta v0.2.7 2026-10-24; Linux beta v0.1.0 2026-09-08"
     sources: ["https://www.vpnpro89.com/en/"]
 
@@ -720,7 +721,7 @@ entries:
     protocols: ["WireGuard", "Stealth (proprietary obfuscation, auto-selected)"]
     logging: "No-logs claim (no activity logs, no IP/email/connection times stored per Sep 12 2026 policy); traffic volume/session duration tied to anonymous install ID processed temporarily; Google AdMob ads (may be personalized), Firebase/Google Analytics; Play Data safety: collects app activity, performance data, device IDs, data can't be deleted; NO independent audit; BVI jurisdiction (Ninja VPN Ltd., reg. no. 2161939)"
     platforms: ["Android 8.0+ only (iOS/Windows/browser extensions only planned)"]
-    last_verified: "2026-11-12"
+    last_verified: "2026-11-16"
     change_log: "2026-09-12: developer stopped operating in Russia, Iran and China (no install button in Russian Play storefront). 2026-11-11: Bessy review verified official site ninjavpn.app exists (template-style; site claims 500+ servers, Double VPN, 10 devices, OpenVPN/IKEv2 — not reflected on Play listing, go by listing and ToS). Multiple same-name apps exist (HEROIC's NinjaVPN, ninjavpn.org) — this entry is Ninja VPN Ltd., Play id app.ninjavpn.android, 10M+ installs, v1.4.12 (2026-10-12)"
     sources: ["https://ninjavpn.app/", "https://play.google.com/store/apps/details?id=app.ninjavpn.android", "https://bessy.my/en/blog/reviews/ninja-vpn"]
 
@@ -741,7 +742,7 @@ entries:
     protocols: ["HTTPS proxy (browser-only; NOT a full-device VPN tunnel)"]
     logging: "Strict no-logs claim for the full service, Deloitte-audited, quarterly transparency reports; extension itself is a proxy — Firefox add-on page warns it does not protect against WebRTC leaks; top10vpn (2026-09-30) found real-IP leaks in tests — do not use for privacy-sensitive activity; Romania (Kape-owned)"
     platforms: ["Chrome extension", "Firefox extension"]
-    last_verified: "2026-11-13"
+    last_verified: "2026-11-16"
     change_log: "Free-forever browser proxy (not a trial); full-device VPN remains paid-only (24h desktop trial, 3-day Android, 7-day iOS, 45-day money-back). 2026-11-13: added — official support page confirms extensions are free with no account; terms corroborated by TechRepublic, top10vpn (2026-09-30) and umatechnology (checked 2026-10-07). 2026-11-13: data-cap conflict resolved — CyberGhost's own Chrome Web Store & Firefox Add-ons listings state unlimited bandwidth; the single 'limited' claim came from one low-authority review with no official backing."
     sources: ["https://www.cyberghostvpn.com/download/chrome-vpn", "https://support.cyberghostvpn.com/hc/en-us/articles/360016419880-Where-Can-I-Download-the-Latest-Version-of-CyberGhost-VPN", "https://addons.mozilla.org/en-US/firefox/addon/cyberghost-vpn-free-proxy/", "https://chromewebstore.google.com/detail/cyberghost-vpn-%E2%80%93-proxy-fo/ffbkglfijbcbgblgflchnbphjdllaogb?hl=en", "https://www.top10vpn.com/guides/get-cyberghost-for-free/", "https://www.techrepublic.com/article/best-chrome-vpn-extensions/"]
 
@@ -762,7 +763,7 @@ entries:
     protocols: ["Berry Protocol (proprietary, per official site)"]
     logging: "No browsing/content logging claimed (official FAQ); keeps technical records (session start, server used); servers run by independent operators who may keep their own logs; NO independent audit; operator Coin Alarm"
     platforms: ["Android (Windows & macOS coming soon)"]
-    last_verified: "2026-11-14"
+    last_verified: "2026-11-16"
     change_log: "2026-11-14: added — official site berryvpn.app verified (free tier + FAQ logging statement); v1.3.7 on Google Play (2026-11-06); monitored candidate since 2026-11-11, when no official site was verifiable"
     sources: ["https://www.berryvpn.app/", "https://www.appbrain.com/app/berry-vpn-fast-secure-proxy/app.berryvpn", "https://play.google.com/store/apps/details?id=app.berryvpn", "https://berry-vpn-fast-secure-proxy.en.softonic.com/android"]
 
@@ -783,8 +784,8 @@ entries:
     protocols: ["VLESS + Reality"]
     logging: "No-logs claim: no record of sites visited, no traffic content, no sale of data (privacy policy 2026-11-03); IP visible to server while connected; free version shows Google AdMob ads; Play Data safety: may share Location, App activity + 2 others; NO independent audit; operator Averon Soft (jurisdiction not disclosed)"
     platforms: ["Android"]
-    last_verified: "2026-11-14"
-    change_log: "2026-11-14: added — official site skyvora.app + privacy policy (2026-11-03) verified; monitored candidate since 2026-11-11, when no official site was verifiable"
+    last_verified: "2026-11-16"
+    change_log: "2026-11-14: added — official site skyvora.app + privacy policy (2026-11-03) verified; monitored candidate since 2026-11-11, when no official site was verifiable. 2026-11-16: Google Play listing（2026-11-10 更新）新增可选 Skyvora Premium（去广告 + Turbo 服务器），免费档仍不限量不限时"
     sources: ["https://skyvora.app/", "https://skyvora.app/privacy.html", "https://www.appbrain.com/app/skyvora-vpn-fast-vpn-proxy/com.skyvora.vpn", "https://play.google.com/store/apps/details?id=com.skyvora.vpn"]
 
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。

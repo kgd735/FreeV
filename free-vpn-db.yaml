@@ -788,6 +788,27 @@ entries:
     change_log: "2026-11-14: added — official site skyvora.app + privacy policy (2026-11-03) verified; monitored candidate since 2026-11-11, when no official site was verifiable. 2026-11-16: Google Play listing（2026-11-10 更新）新增可选 Skyvora Premium（去广告 + Turbo 服务器），免费档仍不限量不限时"
     sources: ["https://skyvora.app/", "https://skyvora.app/privacy.html", "https://www.appbrain.com/app/skyvora-vpn-fast-vpn-proxy/com.skyvora.vpn", "https://play.google.com/store/apps/details?id=com.skyvora.vpn"]
 
+  - id: grass-vpn
+    name: Grass VPN
+    official_url: https://freevpngrass.com
+    status: active
+    free_tier:
+      data_cap: "unlimited data, no time limit; free sessions last 1 hour, reconnect anytime"
+      devices: "1 (Android only)"
+      countries: "4 (US, DE, FR, TR; auto-select or manual)"
+      signup: "no registration/account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; VLESS + Reality servers (datacenter presumed)"
+    ip_type: "datacenter (VLESS + Reality)"
+    protocols: ["VLESS + Reality"]
+    logging: "No-logs claim for VPN browsing activity (privacy policy: IP collected but not stored beyond session; no browsing data stored); free version shows personalized ads via ad networks (AAID/IDFA, device info collected); NO independent audit; operator A24Z LTD (London, UK)"
+    platforms: ["Android 7.0+"]
+    last_verified: "2026-11-19"
+    change_log: "2026-11-19: added — official site freevpngrass.com + privacy policy (last updated 2023-05-04, operator A24Z LTD) verified; Play listing v2.2.32 (2026-11-01), 690k installs, 3.89 stars; monitored candidate since 2026-11-18, when no official site was verifiable"
+    sources: ["https://freevpngrass.com/", "https://freevpngrass.com/privacy/", "https://www.appbrain.com/app/grass-vpn-unlimited-vpn-proxy/com.freevpn.vpngrass", "https://play.google.com/store/apps/details?id=com.freevpn.vpngrass"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

@@ -809,6 +809,27 @@ entries:
     change_log: "2026-11-19: added — official site freevpngrass.com + privacy policy (last updated 2023-05-04, operator A24Z LTD) verified; Play listing v2.2.32 (2026-11-01), 690k installs, 3.89 stars; monitored candidate since 2026-11-18, when no official site was verifiable"
     sources: ["https://freevpngrass.com/", "https://freevpngrass.com/privacy/", "https://www.appbrain.com/app/grass-vpn-unlimited-vpn-proxy/com.freevpn.vpngrass", "https://play.google.com/store/apps/details?id=com.freevpn.vpngrass"]
 
+  - id: zoogvpn
+    name: ZoogVPN Free
+    official_url: https://zoogvpn.com
+    status: active
+    free_tier:
+      data_cap: "10 GB/month"
+      devices: "1"
+      countries: "5 (US, UK, NL, DE, SG)"
+      signup: "email required (free account)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs; no residential/P2P feature"
+    ip_type: "datacenter"
+    protocols: ["WireGuard", "IKEv2", "OpenVPN", "Shadow (obfuscation)", "Rift", "kill switch"]
+    logging: "No-logs claim; NO independent audit published; Greece (outside 5/9/14 Eyes); free tier uses 128-bit encryption (256-bit is Premium)"
+    platforms: ["Windows", "macOS", "iOS", "iPadOS", "Android", "Linux", "Chromebook", "Kindle Fire", "router"]
+    last_verified: "2026-11-20"
+    change_log: "2026-11-20: added — official free-VPN page verified (lifetime free, 10 GB/month, 5 locations, 1 device, no card, no ads); monitored candidate surfaced by Toolradar 2026-11-19 roundup. Location-count conflict: older reviews/FAQ say 3 locations, current official free page lists 5 (US/UK/NL/DE/SG) — go by the free page. One older review claimed the free plan expires after 14 days; current official page states 'Free for life, not a trial'"
+    sources: ["https://zoogvpn.com/free-vpn", "https://toolradar.com/blog/best-free-vpns", "https://www.safetydetectives.com/best-vpns/zoogtv/?filter_sort=helpful", "https://impulsec.com/virtual-private-network/zoog-vpn-review/"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

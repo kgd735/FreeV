@@ -830,6 +830,27 @@ entries:
     change_log: "2026-11-20: added — official free-VPN page verified (lifetime free, 10 GB/month, 5 locations, 1 device, no card, no ads); monitored candidate surfaced by Toolradar 2026-11-19 roundup. Location-count conflict: older reviews/FAQ say 3 locations, current official free page lists 5 (US/UK/NL/DE/SG) — go by the free page. One older review claimed the free plan expires after 14 days; current official page states 'Free for life, not a trial'"
     sources: ["https://zoogvpn.com/free-vpn", "https://toolradar.com/blog/best-free-vpns", "https://www.safetydetectives.com/best-vpns/zoogtv/?filter_sort=helpful", "https://impulsec.com/virtual-private-network/zoog-vpn-review/"]
 
+  - id: unblockmevpn
+    name: UnblockMeVPN
+    official_url: https://www.unblockmevpn.com
+    status: active
+    free_tier:
+      data_cap: "not stated (no cap mentioned on free page; fair use applies)"
+      devices: "undisclosed (paid plans: 5 devices)"
+      countries: "1 (Los Angeles, US — Sharktech)"
+      signup: "account required (email, or account number + recovery key; no email needed for account-number login)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs (Sharktech)"
+    ip_type: "datacenter"
+    protocols: ["OpenVPN"]
+    logging: "NOT no-logs — server diagnostics may include source/destination addresses and ports, timestamps, connection identifiers, associated with account/device; retained in server logs with no single fixed retention period; no independent audit; US (Hawaii)"
+    platforms: ["Windows", "macOS", "iOS", "Android"]
+    last_verified: "2026-11-21"
+    change_log: "2026-11-21: added — official free page published 2026-11-12 (one free Los Angeles location, no card); free access is discretionary and may be limited, suspended or discontinued at any time (official free page + ToS)"
+    sources: ["https://www.unblockmevpn.com/free-usa-vpn-no-credit-card.html", "https://www.unblockmevpn.com/privacy.html", "https://www.unblockmevpn.com/terms.html", "https://appbreakup.com/apps/unblockmevpn", "https://buildvoyage.com/products/unblockmevpn"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

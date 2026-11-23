@@ -874,6 +874,27 @@ entries:
     change_log: "2026-11-23: added — official site eonvpn.com verified (v2.2, 441k+ registered users, free for life, 40+ servers / 8+ countries); bandwidth-sharing model flagged; no privacy policy page found; monitored candidate since 2026-11-22"
     sources: ["https://eonvpn.com/", "https://sourceforge.net/software/product/EonVPN/", "https://reviews.financesonline.com/p/eonvpn", "https://eonvpn.com/blog/discord-unblocked/"]
 
+  - id: zori-vpn
+    name: Zori VPN
+    official_url: https://zorivpn.xyz
+    status: active
+    free_tier:
+      data_cap: "unlimited (no data caps, speed caps or session time limits)"
+      devices: "1 (Android only)"
+      countries: "undisclosed count (location choice by country/city; auto server selection)"
+      signup: "no account required"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; datacenter IPs presumed"
+    ip_type: "datacenter (presumed)"
+    protocols: ["undisclosed (auto-selected; no manual protocol setup)"]
+    logging: "No-logs claim for VPN activity (no browsing history, DNS queries, traffic contents or connection logs incl. source/destination IPs and times); app analytics/diagnostics enabled by default with no in-app opt-out; advertising-ID collection disabled, no ads in app; Firebase + Cloudflare as service providers; NO independent audit; operator KYTTARA, LLC (Las Vegas, NV, US)"
+    platforms: ["Android 8.0+ (ARM64 only)"]
+    last_verified: "2026-11-23"
+    change_log: "2026-11-23: added — launched on Google Play Nov 2026 (v1.0.3 Nov 4, v1.0.7 Nov 8); official site zorivpn.xyz + privacy policy verified; installs ~12k on Nov 10 → ~70k by Nov 20–22 (AppBrain rankings), 4.5–4.7 stars; no premium tier mentioned on official site as of 2026-11-23"
+    sources: ["https://zorivpn.xyz/", "https://zorivpn.xyz/en/privacy/", "https://www.appbrain.com/app/zori-vpn-no-account-needed/com.zori.vpn", "https://play.google.com/store/apps/details?id=com.zori.vpn"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

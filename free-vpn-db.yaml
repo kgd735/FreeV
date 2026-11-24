@@ -895,6 +895,27 @@ entries:
     change_log: "2026-11-23: added — launched on Google Play Nov 2026 (v1.0.3 Nov 4, v1.0.7 Nov 8); official site zorivpn.xyz + privacy policy verified; installs ~12k on Nov 10 → ~70k by Nov 20–22 (AppBrain rankings), 4.5–4.7 stars; no premium tier mentioned on official site as of 2026-11-23"
     sources: ["https://zorivpn.xyz/", "https://zorivpn.xyz/en/privacy/", "https://www.appbrain.com/app/zori-vpn-no-account-needed/com.zori.vpn", "https://play.google.com/store/apps/details?id=com.zori.vpn"]
 
+  - id: caspervpn
+    name: CasperVPN
+    official_url: https://caspervpn.com
+    status: active
+    free_tier:
+      data_cap: "0.5 GB/month"
+      devices: "up to 3 devices at the same time"
+      countries: "3 server locations (which ones undisclosed)"
+      signup: "no account needed to start (device account); email optional"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; datacenter IPs presumed"
+    ip_type: "datacenter (presumed)"
+    protocols: ["WireGuard", "OpenVPN (UDP/TCP)", "IKEv2/IPSec", "CasperCloak (own protocol)"]
+    logging: "No-activity-logs claim (no browsing activity, connection destinations or DNS queries stored; originating/VPN IPs not logged since Mar 2026); minimal connection metadata retained (timestamps, server, protocol, bandwidth, device identifier); kill switch and Double VPN are Premium-only per company blog; NO independent audit; operator App-Link Offshore S.A.L., Beirut, Lebanon (Commercial Register no. 1808496)"
+    platforms: ["iOS", "iPadOS", "Android (from Nov 23, 2026)"]
+    last_verified: "2026-11-24"
+    change_log: "2026-11-24: added — Android app launched on Google Play Nov 23, 2026 (iOS/iPadOS app since 2018); official site caspervpn.com + privacy policy v1.12 (Nov 13, 2026) verified; Premium from $9.99/month, 7-day trial on subscriptions"
+    sources: ["https://tbreak.com/casper-vpn-android-google-play/", "https://caspervpn.com/privacy", "https://caspervpn.com/blog/what-is-a-vpn-how-does-it-work", "https://apps.apple.com/us/app/caspervpn-wifi-security-vpn/id1187243615"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

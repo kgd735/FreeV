@@ -895,6 +895,27 @@ entries:
     change_log: "2026-11-23: added — launched on Google Play Nov 2026 (v1.0.3 Nov 4, v1.0.7 Nov 8); official site zorivpn.xyz + privacy policy verified; installs ~12k on Nov 10 → ~70k by Nov 20–22 (AppBrain rankings), 4.5–4.7 stars; no premium tier mentioned on official site as of 2026-11-23"
     sources: ["https://zorivpn.xyz/", "https://zorivpn.xyz/en/privacy/", "https://www.appbrain.com/app/zori-vpn-no-account-needed/com.zori.vpn", "https://play.google.com/store/apps/details?id=com.zori.vpn"]
 
+  - id: xxlink
+    name: XXLink Free VPN
+    official_url: https://xxlink.net
+    status: active
+    free_tier:
+      data_cap: "1 GB / 7 days"
+      devices: "undisclosed (account required; device limit not stated)"
+      countries: "6 regions listed (Tokyo, Singapore, Hong Kong, Los Angeles, Frankfurt, Dublin; free line access to all regions not explicitly confirmed)"
+      signup: "account required (email; unverified accounts with no activity auto-deleted after 24h)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "No residential/P2P feature; datacenter IPs presumed"
+    ip_type: "datacenter (presumed)"
+    protocols: ["undisclosed (official site silent)"]
+    logging: "NOT no-logs — unusually transparent policy: server logs keep IP addresses with no fixed expiry; data-usage records (amount, time, region) deleted after 90 days; abuse-investigation capability (destination address/port/protocol per account) currently switched off, but connection destinations were logged with account IDs until 2026-08-22; no sale of personal info; NO independent audit; operator/jurisdiction not disclosed"
+    platforms: ["Windows", "Android (v1.1.1)"]
+    last_verified: "2026-11-25"
+    change_log: "2026-11-25: added — official site xxlink.net (published 2026-11-22) + privacy policy verified; free plan $0, 1 GB/7 days, up to 10 Mbps, free line; account (email) required, no card"
+    sources: ["https://xxlink.net/", "https://xxlink.net/privacy"]
+
   - id: caspervpn
     name: CasperVPN
     official_url: https://caspervpn.com

@@ -937,6 +937,69 @@ entries:
     change_log: "2026-11-24: added — Android app launched on Google Play Nov 23, 2026 (iOS/iPadOS app since 2018); official site caspervpn.com + privacy policy v1.12 (Nov 13, 2026) verified; Premium from $9.99/month, 7-day trial on subscriptions"
     sources: ["https://tbreak.com/casper-vpn-android-google-play/", "https://caspervpn.com/privacy", "https://caspervpn.com/blog/what-is-a-vpn-how-does-it-work", "https://apps.apple.com/us/app/caspervpn-wifi-security-vpn/id1187243615"]
 
+  - id: ethicalvpn
+    name: EthicalVPN
+    official_url: https://ethicalvpn.app
+    status: active
+    free_tier:
+      data_cap: "unlimited (no cap stated; free access in exchange for opt-in proxy sharing)"
+      devices: "1 (desktop only; no account)"
+      countries: "4 (DE Frankfurt, US Newark, FR Paris, UK London)"
+      signup: "no account/subscription; explicit opt-in consent to proxy sharing required (withdrawing consent disconnects VPN access)"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "VPN exits are the provider's 4 server locations (IP type undisclosed, presumed datacenter); free access is funded by opt-in sharing of YOUR bandwidth and public IP for third-party proxy traffic — your device acts as a residential exit for others (Hola/EonVPN-style)"
+    ip_type: "datacenter (presumed); bandwidth-sharing funded"
+    protocols: ["undisclosed (device key-pair + short-lived access credential per connection)"]
+    logging: "Explicitly NO no-logs promise and NO independent audit (privacy page, 2026-10-30); server keeps a temporary access record (public key) per connection; website uses Google Analytics by default (opt-out); operator identity, contact details and retention periods not yet published ('before public availability'); torrenting prohibited"
+    platforms: ["Windows 10/11", "macOS 13+ (Apple Silicon/Intel)", "Linux (DEB, RPM, AppImage, Arch)"]
+    last_verified: "2026-11-26"
+    change_log: "2026-11-26: added — launched on Product Hunt 2026-11-21 (repo created 2026-10-30, v0.2.0/0.2.1); official site ethicalvpn.app + privacy policy (2026-10-30) verified; no paid tier exists at all; Windows binaries unsigned, macOS builds ad-hoc signed (not notarized) per GitHub README"
+    sources: ["https://ethicalvpn.app/", "https://ethicalvpn.app/privacy/", "https://github.com/PiotrWarzachowski/ethicalvpn-downloads", "https://www.producthunt.com/products/ethicalvpn"]
+
+  - id: amnezia-free
+    name: Amnezia Free
+    official_url: https://amnezia.org
+    status: active
+    free_tier:
+      data_cap: "unlimited data (split-tunnel: VPN applies only to blocked sites/apps; speed capped at 8 Mbps)"
+      devices: "1"
+      countries: "no location selection (auto-assigned; targets censored regions: RU, IR, MM, TR, BR, etc.)"
+      signup: "no account/registration"
+      card_required: false
+    residential_ip:
+      has: false
+      note: "Datacenter IPs (Amnezia servers)"
+    ip_type: "datacenter"
+    protocols: ["AmneziaWG"]
+    logging: "No-logs stance: only data required for the VPN to function is collected (official site); no activity history, IP addresses or session data stored per privacy policy; client + server open source (GPLv3); security audits by 7ASecurity in 2022, 2024 and 2025; operator EuphoriaTech Limited (Nicosia, Cyprus)"
+    platforms: ["Windows", "macOS", "Linux", "Android", "iOS"]
+    last_verified: "2026-11-26"
+    change_log: "2026-11-26: added — permanent free tier of the Amnezia project (launched 2020); official site amnezia.org verified; free tier is split-tunnel blocked-sites-only, no YouTube, 8 Mbps cap, no location choice; surfaced by PrivacyAffairs review updated 2026-11-24"
+    sources: ["https://amnezia.org/", "https://www.privacyaffairs.com/reviews/amnezia-vpn/", "https://specifiction.org/tools/amnezia-vpn/", "https://nokycdirectory.com/en/service/amneziavpn"]
+
+  - id: eventvpn
+    name: EventVPN (ExpressVPN free VPN)
+    official_url: https://www.eventvpn.com
+    status: active
+    free_tier:
+      data_cap: "unlimited (ad-supported; 30-second video ad on each connect/disconnect)"
+      devices: "1 (free)"
+      countries: "20 verified usable on free (Tom's Guide Sep 2025; provider claims 35+)"
+      signup: "Apple ID account; one-time $0.29 payment at account creation (Terms §4, anti-abuse); no email signup"
+      card_required: true
+    residential_ip:
+      has: false
+      note: "ExpressVPN datacenter network IPs"
+    ip_type: "datacenter"
+    protocols: ["WireGuard (post-quantum)", "ChaCha20-Poly1305", "kill switch", "RAM-only servers"]
+    logging: "No-logs claim: no collection of VPN activity/metadata (Terms §2/§6.1); runs on ExpressVPN's audited no-logs infrastructure, but EventVPN itself has not yet had its own independent audit (TechNadu Sep 2025); ads via AdMob with ATT/IDFA consent; operator Netshield Limited (Cyprus)"
+    platforms: ["iOS 16+", "macOS (iPhone and Mac only)"]
+    last_verified: "2026-11-26"
+    change_log: "2026-11-26: added — ExpressVPN team's free VPN, launched Sep 2025 (Terms effective 2025-07-30); official Terms verified live 2026-11-26; free tier still current per proxyvpn.pro roundup (~Sep 2026) and live Terms; one-time $0.29 account fee and ad-supported model flagged"
+    sources: ["https://www.eventvpn.com/terms/", "https://www.tomsguide.com/computing/vpns/we-tried-out-expressvpns-new-free-vpn-eventvpn-its-good-but-theres-one-drawback", "https://allaboutcookies.org/eventvpn-review", "https://proxyvpn.pro/best-free-vpn/"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

@@ -1000,6 +1000,27 @@ entries:
     change_log: "2026-11-26: added — ExpressVPN team's free VPN, launched Sep 2025 (Terms effective 2025-07-30); official Terms verified live 2026-11-26; free tier still current per proxyvpn.pro roundup (~Sep 2026) and live Terms; one-time $0.29 account fee and ad-supported model flagged"
     sources: ["https://www.eventvpn.com/terms/", "https://www.tomsguide.com/computing/vpns/we-tried-out-expressvpns-new-free-vpn-eventvpn-its-good-but-theres-one-drawback", "https://allaboutcookies.org/eventvpn-review", "https://proxyvpn.pro/best-free-vpn/"]
 
+  - id: hotarunet
+    name: HotaruNet
+    official_url: https://oneforallhub.github.io/HotaruNet/
+    status: active
+    free_tier:
+      data_cap: "no cap stated (free, no ads)"
+      devices: "1 (single device client; no account)"
+      countries: "EU/US/Asia nodes (exact count undisclosed; auto-selected by throughput probing)"
+      signup: "no account, no subscription, no manual config (zero-config; built-in decentralized subscription nodes)"
+      card_required: false
+    residential_ip:
+      has: unknown
+      note: "Exit nodes are decentralized/community subscription nodes plus Cloudflare WARP (datacenter Anycast IPs); node operators and IP provenance undisclosed"
+    ip_type: "mixed (VLESS/WARP/Hysteria2 community nodes)"
+    protocols: ["VLESS REALITY", "Cloudflare WARP (WireGuard)", "Hysteria 2", "XHTTP/SplitHTTP", "WebSocket+TLS"]
+    logging: "Client claims zero browsing logs; open source (GPL-3.0); no independent audit; exit-node operators are third parties whose logging is unknown — treat as untrusted-exit (VPN Gate-style caveat)"
+    platforms: ["Android 7-15", "Windows 10/11 (portable, x64)"]
+    last_verified: "2026-11-27"
+    change_log: "2026-11-27: added — launched on Product Hunt 2026-11-21, v2.3.44 (2026-11-24); official site + GitHub (OneForAllHub/HotaruNet) verified; free zero-config client with built-in nodes, no account; node provenance/audit caveats flagged"
+    sources: ["https://oneforallhub.github.io/HotaruNet/", "https://github.com/OneForAllHub/HotaruNet", "https://www.producthunt.com/products/hotarunet", "https://lowendtalk.com/discussion/223770/open-source-hotarunet-v2-3-44-zero-config-android-windows-vpn-client-vless-reality-warp-hys"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

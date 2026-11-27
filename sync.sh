@@ -6,6 +6,10 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+# GitHub SSH 走 egress 代理：hatch-git 会剥离 .git/config 里的 core.sshCommand，
+# 所以改用环境变量指定 ssh 命令（配置里已写死别名 github-vpndb + deploy key）。
+export GIT_SSH_COMMAND="ssh -F /home/hatch/.ssh/config"
+
 # 1. 构建：校验 YAML，确保页面运行所需文件就位
 node scripts/build.js
 

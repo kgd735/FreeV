@@ -1021,6 +1021,27 @@ entries:
     change_log: "2026-11-27: added — launched on Product Hunt 2026-11-21, v2.3.44 (2026-11-24); official site + GitHub (OneForAllHub/HotaruNet) verified; free zero-config client with built-in nodes, no account; node provenance/audit caveats flagged"
     sources: ["https://oneforallhub.github.io/HotaruNet/", "https://github.com/OneForAllHub/HotaruNet", "https://www.producthunt.com/products/hotarunet", "https://lowendtalk.com/discussion/223770/open-source-hotarunet-v2-3-44-zero-config-android-windows-vpn-client-vless-reality-warp-hys"]
 
+  - id: sparkproxy-vpn
+    name: SparkProxy Free VPN
+    official_url: https://www.sparkproxy.io/free-vpn/
+    status: active
+    free_tier:
+      data_cap: "unlimited (no cap stated; official ad: unlimited data)"
+      devices: "unlimited devices (per official ad 2026-11-26; no account, device token per install)"
+      countries: "80+ (per official Instagram/Facebook ad 2026-11-26; free-vpn page: choose from countries currently online, city selection coming soon)"
+      signup: "no account, no email, no card; free access requires bandwidth sharing active (sharing off = free access paused)"
+      card_required: false
+    residential_ip:
+      has: partial
+      note: "Hybrid datacentre + residential network — relay assigns an exit from either source depending on availability; your device also acts as a residential exit for other Community members (web connections on ports 80/443 only)"
+    ip_type: "hybrid datacentre + residential (bandwidth-sharing)"
+    protocols: ["system HTTP/HTTPS + SOCKS5 proxy (Windows)", "VPN interface setting device proxy (Android)", "desktop proxy settings (Linux); single authenticated TLS connection to relay; UDP traffic NOT routed"]
+    logging: "Explicitly LOGS connection information for all users (service operation, security monitoring, abuse prevention; may be disclosed to law enforcement) per Terms of Use; app processes device name, hashed device ID, public IP, ISP, network classification; NO no-logs claim; NO independent audit"
+    platforms: ["Windows 10/11 (64-bit)", "Android 10+", "Linux 64-bit (AppImage)"]
+    last_verified: "2026-11-28"
+    change_log: "2026-11-28: added — free VPN promoted 2026-11-26 (official Instagram/Facebook ad); official page sparkproxy.io/free-vpn/ verified; bandwidth-sharing model (free access pauses if sharing off); NOT a full VPN in the strict sense (proxy-based, UDP not routed); connection logging explicitly stated in Terms of Use; no iOS/macOS yet; not the unrelated 'Spark VPN' app on Google Play (Megabus/Gravity Global)"
+    sources: ["https://www.sparkproxy.io/free-vpn/", "https://www.sparkproxy.io/terms-of-use/", "https://www.instagram.com/p/DgNJrIGhjIX/", "https://www.facebook.com/sparkproxy.io/posts/pfbid02HPttFqw4PRdzYDaUFQMvuvdAtjp2A4wL1GFVbopnHJ1HJJWXwaQajcNVe8VZc6EMl"]
+
 # removed: 墓碑记录 — 经每周复核确认无效后从 entries 删除的条目（勿直接丢弃）。
 # 每日检索入库前必须先比对本列表：仅当新信息的可信证据日期晚于 removed_date
 # 且证明服务恢复有效时，才允许重新加入 entries。

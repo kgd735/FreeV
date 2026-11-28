@@ -43,8 +43,8 @@
 ## 同步
 
 - YAML：校验通过（`node scripts/build.js`：50 entries，50 active，8 residential）。
-- Git：`bash sync.sh` 已提交并推送到 origin main（提交待填）。
-- Artifact 网页（slug: mian-fei-vpn-shu-ju-ku）：artifact.edit 同步构建已完成并校验通过（50 条，SparkProxy 卡片字段与 YAML 一致）。注意：公开链接仍显示上一共享版本，新构建需用户重新批准分享后才会更新公开链接。
+- Git：`bash sync.sh` 已提交并推送到 origin main（提交 a4b6f43「更新数据库：新增 SparkProxy Free VPN（2026-11-28，49→50 条）」）。
+- Artifact 网页（slug: mian-fei-vpn-shu-ju-ku）：artifact.edit 同步构建已完成并校验通过（50 条，SparkProxy 卡片字段与 YAML 一致；家宽 true 5 家、partial 3 家；停服 6 条、移除 1 条）。注意：公开链接仍显示上一共享版本，新构建需用户重新批准分享后才会更新公开链接。
 
 ## 周检候选（累计）
 
